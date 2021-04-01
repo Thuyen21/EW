@@ -1,0 +1,121 @@
+﻿@model Dictionary<string, List<string>>
+@{
+    ViewBag.Title = "Chat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<ahead>
+
+    <style>
+        body {
+            margin: 0 auto;
+            max-width: 100%;
+            padding-bottom: 20px;
+        }
+
+        .container1 {
+            border: 2px solid #dedede;
+            background-color: lightcyan;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .darker1 {
+            border-color: #ccc;
+            border: 2px solid #dedede;
+            background-color: darkcyan;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .container::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .container img {
+            float: left;
+            max-width: 60px;
+            width: 100%;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+            .container img.right {
+                float: right;
+                margin-left: 20px;
+                margin-right: 0;
+            }
+            .container1 img.left {
+                float: left;
+                margin-left: 0px;
+                margin-right: 20px;
+            }
+
+       
+    </style>
+</ahead>
+
+<h2 style="margin-bottom: 30px; margin-top:30px">Chat box with @ViewData["mail"]</h2>
+@{ var a = ViewData["id"] as string;}
+
+<div style="padding:30px;border:3px solid #f1f1f1; width:50%; border-radius:10px" class="col-6 align-self-center">
+    <table style="width:100%">
+        @foreach (var item in Model)
+        {
+            if (item.Value[0] == "I")
+            {
+                <tr>
+                    <td>
+                        <div class="container1">
+                            <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Avatar" class="left" style="width:100%">
+                            @item.Value[1]
+                        </div>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            }
+            else if (item.Value[0] == "U")
+            {
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <div class="container darker1">
+                            <img src="https://www.w3schools.com/w3images/avatar_g2.jpg" alt="Avatar" class="right" style="width:100%">
+                            @item.Value[1]
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <input type="hidden" id="co" name="con" value="@Model.Count()" />
+    <input type="hidden" id="co" name="co" value="@a" />
+    @*<input type="text" id="mess" name="mess" class="col-md-12" />*@
+<textarea id="mess" name="mess" placeholder="Write something.." style="height:70px; border-radius:10px" class="col-md-6"></textarea>
+<div class="form-group justify-end">
+    <div class="col-md-offset-2 col-md-10 ">
+        <input type="submit" value="Send" class="btn btn-primary col-2" style="border-radius:10px" />
+    </div>
+</div>
+}
+

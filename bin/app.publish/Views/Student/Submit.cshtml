@@ -1,0 +1,62 @@
+﻿@model WebApplication1.Models.Submissions
+@using Microsoft.AspNet.Identity
+@using System.Security.Claims;
+@{
+    ViewBag.Title = "Sumbmit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sumbmit</h2>
+
+
+
+<div class="form-horizontal">
+    <h4>File</h4>
+    <hr />
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div>Coordinator @ViewData["coordinator"]</div>
+    <div>magid @ViewData["magid"]</div>
+    <div>End @ViewData["dateEnd"]</div>
+    <div>test can @ViewData["canSubmit"]</div>
+
+    @{ var viewDataLink = ViewData["link"] as List<string>;}
+    @{ var viewDataNameFile = ViewData["nameFile"] as List<string>;}
+    @for (int i = 0; i < viewDataLink.Count; i++)
+    {
+        <a href="@viewDataLink[i]">@viewDataNameFile[i]</a> <br />
+    }
+
+
+    @if ((bool)ViewData["canSubmit"] == true)
+    {
+        using (Html.BeginForm("Submit", "student", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            <input type="hidden" value="@ViewData["coordinator"]" name="coordinator" id="coordinator" />
+            <input type="hidden" value="@ViewData["magid"]" name="magid" id="magid" />
+            <div class="form-group">
+                Image
+                <div class="col-md-10">
+                    <input type="file" name="file" class="form-control" required />
+                    <input type="hidden" id="Token" name="Token" value=@(((ClaimsIdentity)User.Identity).FindFirstValue("Token"))>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        
+        }
+    }
+
+
+
+
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>

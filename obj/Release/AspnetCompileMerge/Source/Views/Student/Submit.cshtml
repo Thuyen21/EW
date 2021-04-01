@@ -1,0 +1,103 @@
+﻿@model WebApplication1.Models.Submissions
+@using Microsoft.AspNet.Identity
+@using System.Security.Claims;
+@{
+    ViewBag.Title = "Submit File";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="margin-top: 30px; margin-bottom: 20px">Submit File</h2>
+<head>
+    <link rel="stylesheet"
+          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+          crossOrigin="anonymous" />
+    @*<link href="@Url.Content("~/Content/submit.css")" rel="stylesheet" type="text/css" />*@
+</head>
+
+
+<div class="form-horizontal">
+
+    <hr />
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div>Coordinator: @ViewData["coordinator"]</div>
+    <div>Mail: @ViewData["mail"]</div>
+
+    <div>End: @ViewData["dateEnd"]</div>
+    
+
+    @{ var viewDataLink = ViewData["link"] as List<string>;}
+    @{ var viewDataNameFile = ViewData["nameFile"] as List<string>;}
+    @for (int i = 0; i < viewDataLink.Count; i++)
+    {
+        <a href="@viewDataLink[i]">@viewDataNameFile[i]</a> <br />
+        if ((bool)ViewData["canSubmit"] == true)
+        {
+            @Html.ActionLink("Delete", "Delete", new { coordinator = @ViewData["coordinator"], name = @viewDataNameFile[i], i = @i, token = (((ClaimsIdentity)User.Identity).FindFirstValue("Token")) })<br />
+        }
+    }
+
+
+    @for (int i = 0; i < viewDataLink.Count; i++)
+    {
+
+        if (viewDataNameFile[i].Split(".".ToCharArray()).Last() == "jpg" || viewDataNameFile[i].Split(".".ToCharArray()).Last() == "png")
+        {
+            <img src=@viewDataLink[i] alt=@viewDataNameFile[i] width="800" height="600"><br />
+        }
+
+        if (viewDataNameFile[i].Split(".".ToCharArray()).Last() == "docx")
+        {
+            <iframe src="@Url.Action("WordToPdf", "PreviewWord", new { path = viewDataLink[i], name = viewDataNameFile[i] })" width='700' height='550' allowfullscreen webkitallowfullscreen></iframe> <br />
+
+            @*@Html.ActionLink("Preview", "wordtopdf", "Student", new { path = viewDataLink[i], target = "_blank" })*@
+        }
+
+    }
+
+
+
+    @if ((bool)ViewData["canSubmit"] == true)
+    {
+        using (Html.BeginForm("Submit", "student", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            <input type="hidden" value="@ViewData["coordinator"]" name="coordinator" id="coordinator" />
+
+            <div class="form-group">
+
+                <div class="col-md-10">
+                    <input type="file" name="file" id="file" class="form-control" accept="image/*,application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document" required />
+                    <input type="hidden" id="Token" name="Token" value=@(((ClaimsIdentity)User.Identity).FindFirstValue("Token"))>
+                    Agree to Terms and Conditions
+                    <input type="checkbox" name="agree" id="agree" required />
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-primary" style="border-radius:10px; margin-bottom:10px" /> <br />
+                    @Html.ActionLink("< Back to index", "Index", null, new { @class = "btn btn-primary", @style = " border-radius: 10px" })
+                </div>
+                <div>
+
+                </div>
+            </div>
+
+        }
+    }
+
+</div>
+
+
+
+

@@ -1,0 +1,187 @@
+﻿@model WebApplication1.Models.SignUpModel
+
+@{
+    ViewBag.Title = "Create Marketing Coordinator";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /*body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+        }*/
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Add padding to containers */
+        .container1 {
+            padding: 16px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+            input[type=text]:focus, input[type=password]:focus {
+                background-color: #ddd;
+                outline: none;
+            }
+
+        /* Overwrite default styles of hr */
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        /* Set a style for the submit button */
+        .registerbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            /*width: 100%;*/
+            opacity: 0.9;
+        }
+
+            .registerbtn:hover {
+                opacity: 1;
+            }
+
+        /* Add a blue text color to links */
+        a {
+            color: dodgerblue;
+        }
+
+        /* Set a grey background color and center the text of the "sign in" section */
+        .signin {
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<h2 style="padding-top:30px">Create Marketing Coordinator</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>SignUpModel</h4>
+        <hr />
+
+        @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Name Course:
+            <input type="text" required name="nameCourse" id="nameCourse" />
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <input type="hidden" value="true" id="enable" name="enable" />
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>*@
+
+        @*---------------------------0------------------------------------------------*@
+
+        <div class="container1">
+
+            <p>Please fill in this form to create an account.</p>
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="col-12">
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                <label for="name" class="form-label col-md-1">Full name</label>
+                <input type="text" id="name" class="form-input zoom" placeholder="Ex: John Doe" required name="name" style="border-radius:10px; padding:10px;width:280px; margin:10px">
+            </div>
+            <div class="col-12">
+                <label for="course" class="form-label col-md-1">Course name</label>                
+                <input type="text" id="nameCourse" class="form-input zoom" placeholder="Ex: Course name" required name="nameCourse" style="border-radius:10px; padding:10px;width:280px; margin:10px">
+            </div>
+
+            <div class="col-12">
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                <label for="email" class="form-label col-md-1">Email</label>
+                <input type="email" id="email" class="form-input zoom" placeholder="Ex: johndoe@email.com" required name="email" style="border-radius:10px; padding:10px; width:280px;margin:10px">
+            </div>
+            <div class="col-12">
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                <label for="password" class="form-label col-md-1">Password</label>
+                <input type="password" id="password" class="form-input zoom" placeholder="************" required name="password" style="border-radius:10px; padding:10px; width:280px;margin:10px">
+            </div>
+            @*<div class="form-group col-12">
+                <div class="form-label col-md-1">
+                    Marketing Coordinator
+                </div>
+                
+            </div>*@
+            <div class="col-12">
+                <input type="hidden" id="enable" name="enable" value="true" checked>
+            </div>
+
+
+
+            <hr>
+            <p>By creating an account, need agree to <a href="#">Terms & Privacy</a>.</p>
+
+            <button type="submit" class="btn btn-primary" style="border-radius:10px">Create</button>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+}
+
+<div class="container1">
+    @*@Html.ActionLink("Back to List", "Index")*@
+    @Html.ActionLink("< Back to List", "Index", null, new { @class = "btn btn-primary", style = " border-radius:10px" })
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

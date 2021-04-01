@@ -1,0 +1,47 @@
+﻿@model Dictionary<string, List<string>>
+@{
+    ViewBag.Title = "Chat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chat</h2>
+@{ var a = ViewData["id"] as string;}
+<table>
+    @foreach (var item in Model)
+    {
+        if (item.Value[0] == "I")
+        {
+            <tr>
+                <td>
+                    @item.Value[1]
+                </td>
+                <td>
+                </td>
+            </tr>
+        }
+        else if (item.Value[0] == "U")
+        {
+            <tr>
+                <td>
+                </td>
+                <td>
+                    @item.Value[1]
+                </td>
+            </tr>
+        }
+    }
+
+</table>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <input type="hidden" id="co" name="con" value="@Model.Count()" />
+    <input type="hidden" id="co" name="co" value="@a" />
+    <input type="text" id="mess" name="mess" />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+}

@@ -1,0 +1,50 @@
+﻿@model Dictionary<string, List<string>>
+@{
+    ViewBag.Title = "Mark";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Mark</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Student
+        </th>
+        <th>
+            Mark
+        </th>
+        <th>
+            Comment
+        </th>
+        <th></th>
+    </tr>
+  
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Key)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Value[0])
+    </td>
+    <td>
+        @if (item.Value.Count > 1 && item.Value.Last() != null)
+        {
+            @Html.DisplayFor(modelItem => item.Value[1])
+        }
+
+    </td>
+    <td>
+        @Html.ActionLink("Marking", "Marking", new { id = item.Key }) |
+
+    </td>
+</tr>
+        }
+    }
+
+
+</table>

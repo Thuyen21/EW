@@ -1,0 +1,1643 @@
+D:\3 over\WebApplication1\bin\WebApplication1.dll.config
+D:\3 over\WebApplication1\bin\WebApplication1.dll
+D:\3 over\WebApplication1\bin\WebApplication1.pdb
+D:\3 over\WebApplication1\bin\roslyn\csc.exe
+D:\3 over\WebApplication1\bin\roslyn\csc.exe.config
+D:\3 over\WebApplication1\bin\roslyn\csc.rsp
+D:\3 over\WebApplication1\bin\roslyn\csi.exe
+D:\3 over\WebApplication1\bin\roslyn\csi.exe.config
+D:\3 over\WebApplication1\bin\roslyn\csi.rsp
+D:\3 over\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\3 over\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\3 over\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\3 over\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\3 over\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\3 over\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\3 over\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\3 over\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\3 over\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\3 over\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\3 over\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\3 over\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\3 over\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\3 over\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\3 over\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication1\bin\roslyn\vbc.exe
+D:\3 over\WebApplication1\bin\roslyn\vbc.exe.config
+D:\3 over\WebApplication1\bin\roslyn\vbc.rsp
+D:\3 over\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\3 over\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\3 over\WebApplication1\bin\Antlr3.Runtime.dll
+D:\3 over\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\3 over\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\3 over\WebApplication1\bin\Newtonsoft.Json.dll
+D:\3 over\WebApplication1\bin\System.Web.Helpers.dll
+D:\3 over\WebApplication1\bin\System.Web.Mvc.dll
+D:\3 over\WebApplication1\bin\System.Web.Optimization.dll
+D:\3 over\WebApplication1\bin\System.Web.Razor.dll
+D:\3 over\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\3 over\WebApplication1\bin\System.Web.WebPages.dll
+D:\3 over\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\3 over\WebApplication1\bin\WebGrease.dll
+D:\3 over\WebApplication1\bin\System.Web.Helpers.xml
+D:\3 over\WebApplication1\bin\System.Web.Mvc.xml
+D:\3 over\WebApplication1\bin\System.Web.Optimization.xml
+D:\3 over\WebApplication1\bin\System.Web.Razor.xml
+D:\3 over\WebApplication1\bin\System.Web.WebPages.xml
+D:\3 over\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\3 over\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\3 over\WebApplication1\bin\Newtonsoft.Json.xml
+D:\3 over\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\3 over\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\3 over\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+D:\3 over\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\3 over\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\3 over\WebApplication1\obj\Debug\WebApplication1.dll
+D:\3 over\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\3 over\WebApplication1\bin\Firebase.Auth.dll
+D:\3 over\WebApplication1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\3 over\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\3 over\WebApplication1\bin\Microsoft.Owin.dll
+D:\3 over\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\3 over\WebApplication1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\3 over\WebApplication1\bin\Microsoft.Owin.Security.dll
+D:\3 over\WebApplication1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\3 over\WebApplication1\bin\Owin.dll
+D:\3 over\WebApplication1\bin\System.Diagnostics.DiagnosticSource.dll
+D:\3 over\WebApplication1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\3 over\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\3 over\WebApplication1\bin\Microsoft.Owin.xml
+D:\3 over\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\3 over\WebApplication1\bin\Microsoft.Owin.Security.xml
+D:\3 over\WebApplication1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\3 over\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\3 over\WebApplication1\bin\System.Diagnostics.DiagnosticSource.xml
+D:\3 over\WebApplication1\bin\EntityFramework.dll
+D:\3 over\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\3 over\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\3 over\WebApplication1\bin\EntityFramework.xml
+D:\3 over\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\3 over\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\3 over\WebApplication1\bin\FireSharp.dll
+D:\3 over\WebApplication1\bin\Microsoft.Threading.Tasks.dll
+D:\3 over\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\3 over\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication1\bin\System.Net.Http.Extensions.dll
+D:\3 over\WebApplication1\bin\System.Net.Http.Primitives.dll
+D:\3 over\WebApplication1\bin\Microsoft.Threading.Tasks.xml
+D:\3 over\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\3 over\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\3 over\WebApplication1\bin\System.Net.Http.Extensions.xml
+D:\3 over\WebApplication1\bin\System.Net.Http.Primitives.xml
+D:\3 over\WebApplication1\obj\Debug\WebApplication1.csproj.App.config
+D:\3 over\WebApplication1\bin\roslyn\System.Buffers.dll
+D:\3 over\WebApplication1\bin\roslyn\System.Memory.dll
+D:\3 over\WebApplication1\bin\roslyn\System.Numerics.Vectors.dll
+D:\3 over\WebApplication1\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\3 over\WebApplication1\bin\System.Buffers.dll
+D:\3 over\WebApplication1\bin\System.Memory.dll
+D:\3 over\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\3 over\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\3 over\WebApplication1\bin\System.Buffers.xml
+D:\3 over\WebApplication1\bin\System.Memory.xml
+D:\3 over\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\3 over\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\3 over\WebApplication1\bin\FirebaseAdmin.dll
+D:\3 over\WebApplication1\bin\Google.Api.Gax.dll
+D:\3 over\WebApplication1\bin\Google.Api.Gax.Rest.dll
+D:\3 over\WebApplication1\bin\Google.Apis.Auth.dll
+D:\3 over\WebApplication1\bin\Google.Apis.Auth.PlatformServices.dll
+D:\3 over\WebApplication1\bin\Google.Apis.Core.dll
+D:\3 over\WebApplication1\bin\Google.Apis.dll
+D:\3 over\WebApplication1\bin\Google.Apis.PlatformServices.dll
+D:\3 over\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\3 over\WebApplication1\bin\System.Collections.Immutable.dll
+D:\3 over\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication1\bin\FirebaseAdmin.xml
+D:\3 over\WebApplication1\bin\Google.Api.Gax.pdb
+D:\3 over\WebApplication1\bin\Google.Api.Gax.xml
+D:\3 over\WebApplication1\bin\Google.Api.Gax.Rest.pdb
+D:\3 over\WebApplication1\bin\Google.Api.Gax.Rest.xml
+D:\3 over\WebApplication1\bin\Google.Apis.pdb
+D:\3 over\WebApplication1\bin\Google.Apis.xml
+D:\3 over\WebApplication1\bin\Google.Apis.Auth.pdb
+D:\3 over\WebApplication1\bin\Google.Apis.Auth.xml
+D:\3 over\WebApplication1\bin\Google.Apis.Core.pdb
+D:\3 over\WebApplication1\bin\Google.Apis.Core.xml
+D:\3 over\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\3 over\WebApplication1\bin\System.Collections.Immutable.xml
+D:\3 over\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\3 over\WebApplication1\bin\Firebase.dll
+D:\3 over\WebApplication1\bin\Firebase.Storage.dll
+D:\3 over\WebApplication1\bin\IdentityModel.dll
+D:\3 over\WebApplication1\bin\LiteDB.dll
+D:\3 over\WebApplication1\bin\System.Reactive.dll
+D:\3 over\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\3 over\WebApplication1\bin\System.Text.Json.dll
+D:\3 over\WebApplication1\bin\System.ValueTuple.dll
+D:\3 over\WebApplication1\bin\Firebase.xml
+D:\3 over\WebApplication1\bin\IdentityModel.pdb
+D:\3 over\WebApplication1\bin\IdentityModel.xml
+D:\3 over\WebApplication1\bin\LiteDB.xml
+D:\3 over\WebApplication1\bin\System.Reactive.xml
+D:\3 over\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\3 over\WebApplication1\bin\System.Text.Json.xml
+D:\3 over\WebApplication1\bin\System.ValueTuple.xml
+D:\3 over\WebApplication12\WebApplication1\bin\WebApplication1.dll.config
+D:\3 over\WebApplication12\WebApplication1\bin\WebApplication1.dll
+D:\3 over\WebApplication12\WebApplication1\bin\WebApplication1.pdb
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\csc.exe
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\csc.exe.config
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\csc.rsp
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\csi.exe
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\csi.exe.config
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\csi.rsp
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\System.Buffers.dll
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\System.Memory.dll
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\System.Numerics.Vectors.dll
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\vbc.exe
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\vbc.exe.config
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\vbc.rsp
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\3 over\WebApplication12\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\3 over\WebApplication12\WebApplication1\bin\Antlr3.Runtime.dll
+D:\3 over\WebApplication12\WebApplication1\bin\EntityFramework.dll
+D:\3 over\WebApplication12\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Firebase.Auth.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Firebase.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Firebase.Storage.dll
+D:\3 over\WebApplication12\WebApplication1\bin\FirebaseAdmin.dll
+D:\3 over\WebApplication12\WebApplication1\bin\FireSharp.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Api.Gax.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Api.Gax.Rest.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Apis.Auth.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Apis.Auth.PlatformServices.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Apis.Core.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Apis.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Apis.PlatformServices.dll
+D:\3 over\WebApplication12\WebApplication1\bin\IdentityModel.dll
+D:\3 over\WebApplication12\WebApplication1\bin\LiteDB.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Owin.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Newtonsoft.Json.dll
+D:\3 over\WebApplication12\WebApplication1\bin\Owin.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Buffers.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Collections.Immutable.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Diagnostics.DiagnosticSource.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Memory.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Net.Http.Extensions.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Net.Http.Primitives.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Reactive.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Text.Json.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.ValueTuple.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Web.Helpers.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Web.Mvc.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Web.Optimization.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Web.Razor.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Web.WebPages.dll
+D:\3 over\WebApplication12\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\3 over\WebApplication12\WebApplication1\bin\WebGrease.dll
+D:\3 over\WebApplication12\WebApplication1\bin\EntityFramework.xml
+D:\3 over\WebApplication12\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Firebase.xml
+D:\3 over\WebApplication12\WebApplication1\bin\FirebaseAdmin.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Api.Gax.pdb
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Api.Gax.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Api.Gax.Rest.pdb
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Api.Gax.Rest.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Apis.pdb
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Apis.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Apis.Auth.pdb
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Apis.Auth.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Apis.Core.pdb
+D:\3 over\WebApplication12\WebApplication1\bin\Google.Apis.Core.xml
+D:\3 over\WebApplication12\WebApplication1\bin\IdentityModel.pdb
+D:\3 over\WebApplication12\WebApplication1\bin\IdentityModel.xml
+D:\3 over\WebApplication12\WebApplication1\bin\LiteDB.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Owin.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Newtonsoft.Json.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Buffers.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Collections.Immutable.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Diagnostics.DiagnosticSource.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Memory.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Net.Http.Extensions.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Net.Http.Primitives.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Reactive.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Text.Json.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.ValueTuple.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Web.Helpers.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Web.Mvc.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Web.Optimization.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Web.Razor.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Web.WebPages.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\3 over\WebApplication12\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\3 over\WebApplication12\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\3 over\WebApplication12\WebApplication1\obj\Debug\WebApplication1.csproj.App.config
+D:\3 over\WebApplication12\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+D:\3 over\WebApplication12\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\3 over\WebApplication12\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\3 over\WebApplication12\WebApplication1\obj\Debug\WebApplication1.dll
+D:\3 over\WebApplication12\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\WebApplication1.dll.config
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\WebApplication1.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\WebApplication1.pdb
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csc.exe
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csc.exe.config
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csc.rsp
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csi.exe
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csi.exe.config
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csi.rsp
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Buffers.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Memory.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Numerics.Vectors.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\vbc.exe
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\vbc.exe.config
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\vbc.rsp
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Antlr3.Runtime.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\EntityFramework.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Firebase.Auth.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Firebase.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Firebase.Storage.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\FirebaseAdmin.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\FireSharp.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.Rest.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Auth.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Auth.PlatformServices.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Core.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.PlatformServices.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\IdentityModel.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\LiteDB.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Newtonsoft.Json.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Owin.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Buffers.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Collections.Immutable.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Diagnostics.DiagnosticSource.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Memory.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Net.Http.Extensions.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Net.Http.Primitives.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Reactive.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Text.Json.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.ValueTuple.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Helpers.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Mvc.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Optimization.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Razor.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\WebGrease.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\EntityFramework.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Firebase.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\FirebaseAdmin.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.pdb
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.Rest.pdb
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.Rest.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.pdb
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Auth.pdb
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Auth.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Core.pdb
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Core.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\IdentityModel.pdb
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\IdentityModel.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\LiteDB.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Newtonsoft.Json.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Buffers.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Collections.Immutable.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Diagnostics.DiagnosticSource.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Memory.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Net.Http.Extensions.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Net.Http.Primitives.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Reactive.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Text.Json.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.ValueTuple.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Helpers.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Mvc.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Optimization.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Razor.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.csproj.App.config
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.dll
+D:\3 over\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\WebApplication1.dll.config
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\WebApplication1.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\WebApplication1.pdb
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csc.exe
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csc.exe.config
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csc.rsp
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csi.exe
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csi.exe.config
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csi.rsp
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Buffers.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Memory.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Numerics.Vectors.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\vbc.exe
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\vbc.exe.config
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\vbc.rsp
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Antlr3.Runtime.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\EntityFramework.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Firebase.Auth.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Firebase.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Firebase.Storage.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\FirebaseAdmin.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\FireSharp.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.Rest.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Auth.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Auth.PlatformServices.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Core.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.PlatformServices.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\IdentityModel.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\LiteDB.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Newtonsoft.Json.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Owin.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Buffers.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Collections.Immutable.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Memory.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Net.Http.Extensions.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Net.Http.Primitives.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Reactive.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Text.Json.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.ValueTuple.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Helpers.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Mvc.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Optimization.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Razor.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\WebGrease.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\EntityFramework.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Firebase.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\FirebaseAdmin.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.pdb
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.Rest.pdb
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.Rest.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.pdb
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Auth.pdb
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Auth.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Core.pdb
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Core.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\IdentityModel.pdb
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\IdentityModel.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\LiteDB.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Newtonsoft.Json.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Buffers.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Collections.Immutable.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Memory.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Net.Http.Extensions.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Net.Http.Primitives.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Reactive.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Text.Json.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.ValueTuple.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Helpers.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Mvc.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Optimization.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Razor.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.csproj.App.config
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.dll
+D:\Downloads\WebApplication123\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\WebApplication1.dll.config
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\WebApplication1.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\WebApplication1.pdb
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csc.exe
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csc.exe.config
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csc.rsp
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csi.exe
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csi.exe.config
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\csi.rsp
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Buffers.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Memory.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Numerics.Vectors.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\vbc.exe
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\vbc.exe.config
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\vbc.rsp
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Antlr3.Runtime.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\EntityFramework.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Firebase.Auth.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Firebase.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Firebase.Storage.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\FirebaseAdmin.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\FireSharp.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.Rest.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Auth.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Auth.PlatformServices.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Core.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.PlatformServices.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\IdentityModel.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\LiteDB.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Newtonsoft.Json.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Owin.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Buffers.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Collections.Immutable.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Diagnostics.DiagnosticSource.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Memory.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Net.Http.Extensions.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Net.Http.Primitives.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Reactive.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Text.Json.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.ValueTuple.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Helpers.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Mvc.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Optimization.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Razor.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\WebGrease.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\EntityFramework.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Firebase.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\FirebaseAdmin.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.pdb
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.Rest.pdb
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Api.Gax.Rest.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.pdb
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Auth.pdb
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Auth.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Core.pdb
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Google.Apis.Core.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\IdentityModel.pdb
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\IdentityModel.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\LiteDB.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Newtonsoft.Json.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Buffers.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Collections.Immutable.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Diagnostics.DiagnosticSource.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Memory.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Net.Http.Extensions.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Net.Http.Primitives.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Reactive.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Text.Json.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.ValueTuple.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Helpers.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Mvc.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Optimization.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.Razor.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.csproj.App.config
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.dll
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\WebApplication1.dll.CodeAnalysisLog.xml
+D:\3 over\WebApplication123\WebApplication123\WebApplication12\WebApplication1\bin\WebApplication1.dll.lastcodeanalysissucceeded
+D:\3 over\WebApplication3\WebApplication1\bin\WebApplication1.dll.config
+D:\3 over\WebApplication3\WebApplication1\bin\WebApplication1.dll
+D:\3 over\WebApplication3\WebApplication1\bin\WebApplication1.pdb
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\csc.exe
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\csc.exe.config
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\csc.rsp
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\csi.exe
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\csi.exe.config
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\csi.rsp
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\System.Buffers.dll
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\System.Memory.dll
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\System.Numerics.Vectors.dll
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\vbc.exe
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\vbc.exe.config
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\vbc.rsp
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\3 over\WebApplication3\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\3 over\WebApplication3\WebApplication1\bin\Antlr3.Runtime.dll
+D:\3 over\WebApplication3\WebApplication1\bin\EntityFramework.dll
+D:\3 over\WebApplication3\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Firebase.Auth.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Firebase.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Firebase.Storage.dll
+D:\3 over\WebApplication3\WebApplication1\bin\FirebaseAdmin.dll
+D:\3 over\WebApplication3\WebApplication1\bin\FireSharp.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Api.Gax.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Api.Gax.Rest.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Apis.Auth.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Apis.Auth.PlatformServices.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Apis.Core.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Apis.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Apis.PlatformServices.dll
+D:\3 over\WebApplication3\WebApplication1\bin\IdentityModel.dll
+D:\3 over\WebApplication3\WebApplication1\bin\LiteDB.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Owin.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Owin.Security.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Threading.Tasks.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Newtonsoft.Json.dll
+D:\3 over\WebApplication3\WebApplication1\bin\Owin.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Buffers.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Collections.Immutable.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Diagnostics.DiagnosticSource.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Memory.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Net.Http.Extensions.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Net.Http.Primitives.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Reactive.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Text.Json.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.ValueTuple.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Web.Helpers.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Web.Mvc.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Web.Optimization.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Web.Razor.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Web.WebPages.dll
+D:\3 over\WebApplication3\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\3 over\WebApplication3\WebApplication1\bin\WebGrease.dll
+D:\3 over\WebApplication3\WebApplication1\bin\EntityFramework.xml
+D:\3 over\WebApplication3\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Firebase.xml
+D:\3 over\WebApplication3\WebApplication1\bin\FirebaseAdmin.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Api.Gax.pdb
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Api.Gax.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Api.Gax.Rest.pdb
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Api.Gax.Rest.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Apis.pdb
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Apis.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Apis.Auth.pdb
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Apis.Auth.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Apis.Core.pdb
+D:\3 over\WebApplication3\WebApplication1\bin\Google.Apis.Core.xml
+D:\3 over\WebApplication3\WebApplication1\bin\IdentityModel.pdb
+D:\3 over\WebApplication3\WebApplication1\bin\IdentityModel.xml
+D:\3 over\WebApplication3\WebApplication1\bin\LiteDB.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Owin.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Owin.Security.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Threading.Tasks.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Newtonsoft.Json.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Buffers.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Collections.Immutable.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Diagnostics.DiagnosticSource.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Memory.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Net.Http.Extensions.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Net.Http.Primitives.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Reactive.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Text.Json.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.ValueTuple.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Web.Helpers.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Web.Mvc.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Web.Optimization.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Web.Razor.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Web.WebPages.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\3 over\WebApplication3\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\3 over\WebApplication3\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\3 over\WebApplication3\WebApplication1\obj\Debug\WebApplication1.csproj.App.config
+D:\3 over\WebApplication3\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\3 over\WebApplication3\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\3 over\WebApplication3\WebApplication1\obj\Debug\WebApplication1.dll
+D:\3 over\WebApplication3\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\3 over\WebApplication3\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\WebApplication1.dll.config
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\WebApplication1.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\WebApplication1.pdb
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\csc.exe
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\csc.exe.config
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\csc.rsp
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\csi.exe
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\csi.exe.config
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\csi.rsp
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\System.Buffers.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\System.Memory.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\System.Numerics.Vectors.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\vbc.exe
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\vbc.exe.config
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\vbc.rsp
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Antlr3.Runtime.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\EntityFramework.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Firebase.Auth.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Firebase.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Firebase.Storage.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\FirebaseAdmin.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\FireSharp.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Api.Gax.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Api.Gax.Rest.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Apis.Auth.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Apis.Auth.PlatformServices.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Apis.Core.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Apis.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Apis.PlatformServices.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\IdentityModel.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\LiteDB.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Owin.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Owin.Security.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Threading.Tasks.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Newtonsoft.Json.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Owin.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Buffers.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Collections.Immutable.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Diagnostics.DiagnosticSource.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Memory.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Net.Http.Extensions.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Net.Http.Primitives.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Reactive.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Text.Json.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.ValueTuple.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Web.Helpers.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Web.Mvc.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Web.Optimization.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Web.Razor.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Web.WebPages.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\WebGrease.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\EntityFramework.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Firebase.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\FirebaseAdmin.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Api.Gax.pdb
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Api.Gax.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Api.Gax.Rest.pdb
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Api.Gax.Rest.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Apis.pdb
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Apis.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Apis.Auth.pdb
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Apis.Auth.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Apis.Core.pdb
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Google.Apis.Core.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\IdentityModel.pdb
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\IdentityModel.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\LiteDB.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Owin.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Owin.Security.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Threading.Tasks.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Newtonsoft.Json.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Buffers.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Collections.Immutable.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Diagnostics.DiagnosticSource.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Memory.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Net.Http.Extensions.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Net.Http.Primitives.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Reactive.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Text.Json.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.ValueTuple.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Web.Helpers.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Web.Mvc.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Web.Optimization.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Web.Razor.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Web.WebPages.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\obj\Debug\WebApplication1.csproj.App.config
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\obj\Debug\WebApplication1.dll
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\3 over\WebApplication3\WebApplication3\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+D:\4 over\WebApplication1\bin\WebApplication1.dll.config
+D:\4 over\WebApplication1\bin\WebApplication1.dll
+D:\4 over\WebApplication1\bin\WebApplication1.pdb
+D:\4 over\WebApplication1\bin\roslyn\csc.exe
+D:\4 over\WebApplication1\bin\roslyn\csc.exe.config
+D:\4 over\WebApplication1\bin\roslyn\csc.rsp
+D:\4 over\WebApplication1\bin\roslyn\csi.exe
+D:\4 over\WebApplication1\bin\roslyn\csi.exe.config
+D:\4 over\WebApplication1\bin\roslyn\csi.rsp
+D:\4 over\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\4 over\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\4 over\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\4 over\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\4 over\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\4 over\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\4 over\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\4 over\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\4 over\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\4 over\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\4 over\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\4 over\WebApplication1\bin\roslyn\System.Buffers.dll
+D:\4 over\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\4 over\WebApplication1\bin\roslyn\System.Memory.dll
+D:\4 over\WebApplication1\bin\roslyn\System.Numerics.Vectors.dll
+D:\4 over\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\4 over\WebApplication1\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\4 over\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\4 over\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\4 over\WebApplication1\bin\roslyn\vbc.exe
+D:\4 over\WebApplication1\bin\roslyn\vbc.exe.config
+D:\4 over\WebApplication1\bin\roslyn\vbc.rsp
+D:\4 over\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\4 over\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\4 over\WebApplication1\bin\Antlr3.Runtime.dll
+D:\4 over\WebApplication1\bin\EntityFramework.dll
+D:\4 over\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\4 over\WebApplication1\bin\Firebase.Auth.dll
+D:\4 over\WebApplication1\bin\Firebase.dll
+D:\4 over\WebApplication1\bin\Firebase.Storage.dll
+D:\4 over\WebApplication1\bin\FirebaseAdmin.dll
+D:\4 over\WebApplication1\bin\FireSharp.dll
+D:\4 over\WebApplication1\bin\Google.Api.Gax.dll
+D:\4 over\WebApplication1\bin\Google.Api.Gax.Rest.dll
+D:\4 over\WebApplication1\bin\Google.Apis.Auth.dll
+D:\4 over\WebApplication1\bin\Google.Apis.Auth.PlatformServices.dll
+D:\4 over\WebApplication1\bin\Google.Apis.Core.dll
+D:\4 over\WebApplication1\bin\Google.Apis.dll
+D:\4 over\WebApplication1\bin\Google.Apis.PlatformServices.dll
+D:\4 over\WebApplication1\bin\IdentityModel.dll
+D:\4 over\WebApplication1\bin\LiteDB.dll
+D:\4 over\WebApplication1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\4 over\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\4 over\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\4 over\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\4 over\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\4 over\WebApplication1\bin\Microsoft.Owin.dll
+D:\4 over\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\4 over\WebApplication1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\4 over\WebApplication1\bin\Microsoft.Owin.Security.dll
+D:\4 over\WebApplication1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\4 over\WebApplication1\bin\Microsoft.Threading.Tasks.dll
+D:\4 over\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\4 over\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\4 over\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\4 over\WebApplication1\bin\Newtonsoft.Json.dll
+D:\4 over\WebApplication1\bin\Owin.dll
+D:\4 over\WebApplication1\bin\System.Buffers.dll
+D:\4 over\WebApplication1\bin\System.Collections.Immutable.dll
+D:\4 over\WebApplication1\bin\System.Diagnostics.DiagnosticSource.dll
+D:\4 over\WebApplication1\bin\System.Memory.dll
+D:\4 over\WebApplication1\bin\System.Net.Http.Extensions.dll
+D:\4 over\WebApplication1\bin\System.Net.Http.Primitives.dll
+D:\4 over\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\4 over\WebApplication1\bin\System.Reactive.dll
+D:\4 over\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\4 over\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\4 over\WebApplication1\bin\System.Text.Json.dll
+D:\4 over\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\4 over\WebApplication1\bin\System.ValueTuple.dll
+D:\4 over\WebApplication1\bin\System.Web.Helpers.dll
+D:\4 over\WebApplication1\bin\System.Web.Mvc.dll
+D:\4 over\WebApplication1\bin\System.Web.Optimization.dll
+D:\4 over\WebApplication1\bin\System.Web.Razor.dll
+D:\4 over\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\4 over\WebApplication1\bin\System.Web.WebPages.dll
+D:\4 over\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\4 over\WebApplication1\bin\WebGrease.dll
+D:\4 over\WebApplication1\bin\EntityFramework.xml
+D:\4 over\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\4 over\WebApplication1\bin\Firebase.xml
+D:\4 over\WebApplication1\bin\FirebaseAdmin.xml
+D:\4 over\WebApplication1\bin\Google.Api.Gax.pdb
+D:\4 over\WebApplication1\bin\Google.Api.Gax.xml
+D:\4 over\WebApplication1\bin\Google.Api.Gax.Rest.pdb
+D:\4 over\WebApplication1\bin\Google.Api.Gax.Rest.xml
+D:\4 over\WebApplication1\bin\Google.Apis.pdb
+D:\4 over\WebApplication1\bin\Google.Apis.xml
+D:\4 over\WebApplication1\bin\Google.Apis.Auth.pdb
+D:\4 over\WebApplication1\bin\Google.Apis.Auth.xml
+D:\4 over\WebApplication1\bin\Google.Apis.Core.pdb
+D:\4 over\WebApplication1\bin\Google.Apis.Core.xml
+D:\4 over\WebApplication1\bin\IdentityModel.pdb
+D:\4 over\WebApplication1\bin\IdentityModel.xml
+D:\4 over\WebApplication1\bin\LiteDB.xml
+D:\4 over\WebApplication1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\4 over\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\4 over\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\4 over\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\4 over\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\4 over\WebApplication1\bin\Microsoft.Owin.xml
+D:\4 over\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\4 over\WebApplication1\bin\Microsoft.Owin.Security.xml
+D:\4 over\WebApplication1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\4 over\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\4 over\WebApplication1\bin\Microsoft.Threading.Tasks.xml
+D:\4 over\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\4 over\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\4 over\WebApplication1\bin\Newtonsoft.Json.xml
+D:\4 over\WebApplication1\bin\System.Buffers.xml
+D:\4 over\WebApplication1\bin\System.Collections.Immutable.xml
+D:\4 over\WebApplication1\bin\System.Diagnostics.DiagnosticSource.xml
+D:\4 over\WebApplication1\bin\System.Memory.xml
+D:\4 over\WebApplication1\bin\System.Net.Http.Extensions.xml
+D:\4 over\WebApplication1\bin\System.Net.Http.Primitives.xml
+D:\4 over\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\4 over\WebApplication1\bin\System.Reactive.xml
+D:\4 over\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\4 over\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\4 over\WebApplication1\bin\System.Text.Json.xml
+D:\4 over\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\4 over\WebApplication1\bin\System.ValueTuple.xml
+D:\4 over\WebApplication1\bin\System.Web.Helpers.xml
+D:\4 over\WebApplication1\bin\System.Web.Mvc.xml
+D:\4 over\WebApplication1\bin\System.Web.Optimization.xml
+D:\4 over\WebApplication1\bin\System.Web.Razor.xml
+D:\4 over\WebApplication1\bin\System.Web.WebPages.xml
+D:\4 over\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\4 over\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\4 over\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\4 over\WebApplication1\obj\Debug\WebApplication1.csproj.App.config
+D:\4 over\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+D:\4 over\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\4 over\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\4 over\WebApplication1\obj\Debug\WebApplication1.dll
+D:\4 over\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\4 over\WebApplication1\bin\WebApplication1.dll.CodeAnalysisLog.xml
+D:\4 over\WebApplication1\bin\WebApplication1.dll.lastcodeanalysissucceeded
+D:\4 over\WebApplication1\WebApplication1\bin\WebApplication1.dll.config
+D:\4 over\WebApplication1\WebApplication1\bin\WebApplication1.dll
+D:\4 over\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\csc.exe
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\csc.exe.config
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\csc.rsp
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\csi.exe
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\csi.exe.config
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\csi.rsp
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\System.Buffers.dll
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\System.Memory.dll
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\System.Numerics.Vectors.dll
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\vbc.exe
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\vbc.exe.config
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\vbc.rsp
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\4 over\WebApplication1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\4 over\WebApplication1\WebApplication1\bin\WebApplication1.dll.CodeAnalysisLog.xml
+D:\4 over\WebApplication1\WebApplication1\bin\WebApplication1.dll.lastcodeanalysissucceeded
+D:\4 over\WebApplication1\WebApplication1\bin\Antlr3.Runtime.dll
+D:\4 over\WebApplication1\WebApplication1\bin\EntityFramework.dll
+D:\4 over\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Firebase.Auth.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Firebase.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Firebase.Storage.dll
+D:\4 over\WebApplication1\WebApplication1\bin\FirebaseAdmin.dll
+D:\4 over\WebApplication1\WebApplication1\bin\FireSharp.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Api.Gax.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Api.Gax.Rest.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Apis.Auth.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Apis.Auth.PlatformServices.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Apis.Core.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Apis.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Apis.PlatformServices.dll
+D:\4 over\WebApplication1\WebApplication1\bin\IdentityModel.dll
+D:\4 over\WebApplication1\WebApplication1\bin\LiteDB.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Owin.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Threading.Tasks.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Newtonsoft.Json.dll
+D:\4 over\WebApplication1\WebApplication1\bin\Owin.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Buffers.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Collections.Immutable.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Diagnostics.DiagnosticSource.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Memory.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Net.Http.Extensions.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Net.Http.Primitives.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Reactive.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Text.Json.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.ValueTuple.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Web.Helpers.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Web.Mvc.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Web.Optimization.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Web.Razor.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Web.WebPages.dll
+D:\4 over\WebApplication1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\4 over\WebApplication1\WebApplication1\bin\WebGrease.dll
+D:\4 over\WebApplication1\WebApplication1\bin\EntityFramework.xml
+D:\4 over\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Firebase.xml
+D:\4 over\WebApplication1\WebApplication1\bin\FirebaseAdmin.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Api.Gax.pdb
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Api.Gax.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Api.Gax.Rest.pdb
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Api.Gax.Rest.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Apis.pdb
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Apis.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Apis.Auth.pdb
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Apis.Auth.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Apis.Core.pdb
+D:\4 over\WebApplication1\WebApplication1\bin\Google.Apis.Core.xml
+D:\4 over\WebApplication1\WebApplication1\bin\IdentityModel.pdb
+D:\4 over\WebApplication1\WebApplication1\bin\IdentityModel.xml
+D:\4 over\WebApplication1\WebApplication1\bin\LiteDB.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Owin.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Threading.Tasks.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Newtonsoft.Json.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Buffers.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Collections.Immutable.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Diagnostics.DiagnosticSource.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Memory.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Net.Http.Extensions.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Net.Http.Primitives.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Reactive.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Text.Json.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.ValueTuple.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Web.Helpers.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Web.Mvc.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Web.Optimization.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Web.Razor.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Web.WebPages.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\4 over\WebApplication1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\4 over\WebApplication1\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\4 over\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.App.config
+D:\4 over\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+D:\4 over\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\4 over\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\4 over\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\4 over\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\WebApplication1.dll.config
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\WebApplication1.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\csc.exe
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\csc.exe.config
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\csc.rsp
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\csi.exe
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\csi.exe.config
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\csi.rsp
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\System.Buffers.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\System.Memory.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\System.Numerics.Vectors.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\vbc.exe
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\vbc.exe.config
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\vbc.rsp
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\WebApplication1.dll.CodeAnalysisLog.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\WebApplication1.dll.lastcodeanalysissucceeded
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Antlr3.Runtime.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\EntityFramework.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Firebase.Auth.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Firebase.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Firebase.Storage.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\FirebaseAdmin.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\FireSharp.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Api.Gax.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Api.Gax.Rest.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Apis.Auth.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Apis.Auth.PlatformServices.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Apis.Core.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Apis.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Apis.PlatformServices.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\IdentityModel.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\LiteDB.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Owin.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Threading.Tasks.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Newtonsoft.Json.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Owin.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Buffers.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Collections.Immutable.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Diagnostics.DiagnosticSource.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Memory.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Net.Http.Extensions.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Net.Http.Primitives.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Reactive.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Text.Json.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.ValueTuple.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Web.Helpers.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Web.Mvc.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Web.Optimization.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Web.Razor.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Web.WebPages.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\WebGrease.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\EntityFramework.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Firebase.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\FirebaseAdmin.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Api.Gax.pdb
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Api.Gax.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Api.Gax.Rest.pdb
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Api.Gax.Rest.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Apis.pdb
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Apis.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Apis.Auth.pdb
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Apis.Auth.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Apis.Core.pdb
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Google.Apis.Core.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\IdentityModel.pdb
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\IdentityModel.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\LiteDB.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Owin.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Threading.Tasks.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Newtonsoft.Json.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Buffers.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Collections.Immutable.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Diagnostics.DiagnosticSource.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Memory.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Net.Http.Extensions.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Net.Http.Primitives.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Reactive.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Text.Json.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.ValueTuple.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Web.Helpers.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Web.Mvc.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Web.Optimization.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Web.Razor.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Web.WebPages.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.App.config
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Ionic.Zip.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\NetOffice.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\OfficeApi.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\VBIDEApi.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\stdole.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\NetOffice.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\OfficeApi.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\VBIDEApi.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Syncfusion.Compression.Base.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Syncfusion.DocIO.Base.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Syncfusion.DocToPdfConverter.Base.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Syncfusion.Licensing.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Syncfusion.OfficeChart.Base.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Syncfusion.Pdf.Base.dll
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Syncfusion.Compression.Base.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Syncfusion.DocIO.Base.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Syncfusion.DocToPdfConverter.Base.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Syncfusion.OfficeChart.Base.xml
+D:\4 over\WebApplication3\WebApplication1\WebApplication1\bin\Syncfusion.Pdf.Base.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\WebApplication1.dll.config
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\WebApplication1.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\WebApplication1.pdb
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\csc.exe
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\csc.exe.config
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\csc.rsp
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\csi.exe
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\csi.exe.config
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\csi.rsp
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\System.Buffers.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\System.Memory.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\System.Numerics.Vectors.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\vbc.exe
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\vbc.exe.config
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\vbc.rsp
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\WebApplication1.dll.CodeAnalysisLog.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\WebApplication1.dll.lastcodeanalysissucceeded
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Antlr3.Runtime.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\EntityFramework.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Firebase.Auth.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Firebase.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Firebase.Storage.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\FirebaseAdmin.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\FireSharp.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Api.Gax.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Api.Gax.Rest.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Apis.Auth.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Apis.Auth.PlatformServices.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Apis.Core.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Apis.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Apis.PlatformServices.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\IdentityModel.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Ionic.Zip.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\LiteDB.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.AspNet.Identity.Core.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Owin.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Owin.Security.Cookies.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Owin.Security.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Threading.Tasks.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\NetOffice.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Newtonsoft.Json.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\OfficeApi.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Owin.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Syncfusion.Compression.Base.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Syncfusion.DocIO.Base.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Syncfusion.DocToPdfConverter.Base.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Syncfusion.Licensing.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Syncfusion.OfficeChart.Base.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Syncfusion.Pdf.Base.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Buffers.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Collections.Immutable.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Diagnostics.DiagnosticSource.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Memory.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Net.Http.Extensions.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Net.Http.Primitives.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Reactive.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Text.Json.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.ValueTuple.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Web.Helpers.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Web.Mvc.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Web.Optimization.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Web.Razor.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Web.WebPages.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\VBIDEApi.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\WebGrease.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\stdole.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\EntityFramework.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Firebase.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\FirebaseAdmin.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Api.Gax.pdb
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Api.Gax.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Api.Gax.Rest.pdb
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Api.Gax.Rest.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Apis.pdb
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Apis.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Apis.Auth.pdb
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Apis.Auth.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Apis.Core.pdb
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Google.Apis.Core.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\IdentityModel.pdb
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\IdentityModel.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\LiteDB.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.AspNet.Identity.Core.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Owin.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Owin.Security.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Owin.Security.Cookies.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Threading.Tasks.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\NetOffice.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Newtonsoft.Json.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\OfficeApi.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Syncfusion.Compression.Base.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Syncfusion.DocIO.Base.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Syncfusion.DocToPdfConverter.Base.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Syncfusion.OfficeChart.Base.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Syncfusion.Pdf.Base.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Buffers.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Collections.Immutable.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Diagnostics.DiagnosticSource.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Memory.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Net.Http.Extensions.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Net.Http.Primitives.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Reactive.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Text.Json.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.ValueTuple.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Web.Helpers.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Web.Mvc.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Web.Optimization.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Web.Razor.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Web.WebPages.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\VBIDEApi.xml
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\obj\Debug\WebApplication1.csproj.App.config
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\obj\Debug\WebApplication1.dll
+D:\4 over\WebApplication3\Web release 1.0\WebApplication1\obj\Debug\WebApplication1.pdb
