@@ -84,33 +84,41 @@ namespace WebApplication1.Controllers
             var response = client.Get("Mark/" + coordinator);
             Dictionary<string, string> mark = JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Body);
             var markSort = new Dictionary<string, string>();
-            foreach(var item in mark)
+            if (mark != null)
             {
-                if(item.Value == "Accept")
+                foreach (var item in mark)
                 {
-                    markSort.Add(item.Key, item.Value);
+                    if (item.Value == "Accept")
+                    {
+                        markSort.Add(item.Key, item.Value);
+                    }
                 }
             }
+
 
             var responseComment = client.Get("Comment/" + coordinator);
             var Comment = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseComment.Body);
 
             var b = new Dictionary<string, List<string>>();
-            foreach (var a in markSort)
+            if (markSort != null)
             {
-                var c = new List<string>();
-                c.Add(JsonConvert.DeserializeObject<string>(client.Get("Account/Student/" + a.Key + "/Email").Body));
-                c.Add(a.Value);                
-                if (Comment != null)
+                foreach (var a in markSort)
                 {
-                    if (Comment.ContainsKey(a.Key))
+                    var c = new List<string>();
+                    c.Add(JsonConvert.DeserializeObject<string>(client.Get("Account/Student/" + a.Key + "/Email").Body));
+                    c.Add(a.Value);
+                    if (Comment != null)
                     {
-                        c.Add(Comment[a.Key]);
-                    }
+                        if (Comment.ContainsKey(a.Key))
+                        {
+                            c.Add(Comment[a.Key]);
+                        }
 
+                    }
+                    b.Add(a.Key, c);
                 }
-                b.Add(a.Key, c);
-            }
+            }    
+            
             return View(b);
         }
         public async System.Threading.Tasks.Task<ActionResult> viewSubmissions(string coordinator, string Student)
