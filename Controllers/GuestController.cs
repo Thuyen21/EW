@@ -50,25 +50,29 @@ namespace WebApplication1.Controllers
             var Comment = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseComment.Body);
 
             var d = new Dictionary<string, List<string>>();
-            foreach (var a in mark)
+            if(mark != null)
             {
-                if (a.Value == "Accept")
+                foreach (var a in mark)
                 {
-                    var c = new List<string>();
-                    c.Add(JsonConvert.DeserializeObject<string>(client.Get("Account/Student/" + a.Key + "/Email").Body));
-                    c.Add(a.Value);
-                    if (Comment != null)
+                    if (a.Value == "Accept")
                     {
-                        if (Comment.ContainsKey(a.Key))
+                        var c = new List<string>();
+                        c.Add(JsonConvert.DeserializeObject<string>(client.Get("Account/Student/" + a.Key + "/Email").Body));
+                        c.Add(a.Value);
+                        if (Comment != null)
                         {
-                            c.Add(Comment[a.Key]);
+                            if (Comment.ContainsKey(a.Key))
+                            {
+                                c.Add(Comment[a.Key]);
+                            }
+
                         }
-
+                        d.Add(a.Key, c);
                     }
-                    d.Add(a.Key, c);
-                }
 
+                }
             }
+            
 
             return View(d);
 
