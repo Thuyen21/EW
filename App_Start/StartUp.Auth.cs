@@ -3,9 +3,6 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace WebApplication1.App_Start
 {
@@ -19,7 +16,7 @@ namespace WebApplication1.App_Start
                 LoginPath = new PathString("/Account/Login"),
                 LogoutPath = new PathString("/Account/LogOff"),
                 ExpireTimeSpan = TimeSpan.FromMinutes(30.0)
-        });
+            });
         }
     }
 }

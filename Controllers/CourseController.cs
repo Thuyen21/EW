@@ -5,12 +5,10 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
 
@@ -25,33 +23,33 @@ namespace WebApplication1.Controllers
 
         // GET: Course
 
-        private static IFirebaseConfig config = new FireSharp.Config.FirebaseConfig
+        private static readonly IFirebaseConfig config = new FireSharp.Config.FirebaseConfig
         {
             AuthSecret = "8Qcxfs4Nx3SwBX9iLWXKtDRyQ2DHZCBATJD075aF",
             BasePath = "https://aspdata-8d746-default-rtdb.europe-west1.firebasedatabase.app/"
         };
         private static IFirebaseClient client;
-        private static string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
-        private static string Bucket = "aspdata-8d746.appspot.com";
+        private static readonly string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
+        private static readonly string Bucket = "aspdata-8d746.appspot.com";
 
 
         [Authorize(Roles = "Marketing Coordinator")]
         public ActionResult Index()
         {
-            var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            var sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+            ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+            string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
 
 
             client = new FireSharp.FirebaseClient(config);
             FirebaseResponse count = client.Get("Course/" + sid);
 
-            var courses = new List<Course>();
+            List<Course> courses = new List<Course>();
 
             FirebaseResponse response = client.Get("Course/" + sid);
             if (response.Body != null && response.Body != "null")
             {
                 dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
-                var json = string.Format("[{0}]", data);
+                dynamic json = string.Format("[{0}]", data);
                 Course[] course = JsonConvert.DeserializeObject<Course[]>(json);
                 courses.Add(course[0]);
 
@@ -66,11 +64,11 @@ namespace WebApplication1.Controllers
         // GET: Course/Details/5
         public ActionResult Details(int id)
         {
-            var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            var sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+            ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+            string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
             client = new FireSharp.FirebaseClient(config);
             FirebaseResponse response = client.Get("Course/" + sid + "/" + id);
-            var course = JsonConvert.DeserializeObject<Course>(response.Body);
+            Course course = JsonConvert.DeserializeObject<Course>(response.Body);
             return View(course);
         }
 
@@ -88,22 +86,24 @@ namespace WebApplication1.Controllers
             client = new FireSharp.FirebaseClient(config);
             FirebaseResponse response = client.Get("Course/" + coordinator);
 
-            var courses = new Course();
+            Course courses = new Course();
             Course data = JsonConvert.DeserializeObject<Course>(response.Body);
-            var json = string.Format("[{0}]", data);
+            string json = string.Format("[{0}]", data);
             client = new FireSharp.FirebaseClient(config);
             string[] roleList = { "Student" };
-            var list = new List<SignUpModel>();
+            List<SignUpModel> list = new List<SignUpModel>();
 
             foreach (string role in roleList)
             {
                 FirebaseResponse student = client.Get("Account/" + role);
                 dynamic studentData = JsonConvert.DeserializeObject<dynamic>(student.Body);
                 if (data != null)
-                    foreach (var item in studentData)
+                {
+                    foreach (dynamic item in studentData)
                     {
                         list.Add(JsonConvert.DeserializeObject<SignUpModel>(((JProperty)item).Value.ToString()));
                     }
+                }
             }
 
             ViewData["students"] = list;
@@ -118,8 +118,8 @@ namespace WebApplication1.Controllers
             try
             {
                 // TODO: Add update logic here
-                var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-                var sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+                ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+                string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
 
 
                 client = new FireSharp.FirebaseClient(config);
@@ -131,10 +131,10 @@ namespace WebApplication1.Controllers
                 }
                 collection.Coordinator = sid;
                 SetResponse setResponse = client.Set("Course/" + sid, collection);
-                var markResponse = client.Get("Mark/" + sid);
-                var mark = JsonConvert.DeserializeObject<Dictionary<string, string>>(markResponse.Body);
-                var markNew = new Dictionary<string, string>();
-                foreach (var a in collection.Student)
+                FirebaseResponse markResponse = client.Get("Mark/" + sid);
+                Dictionary<string, string> mark = JsonConvert.DeserializeObject<Dictionary<string, string>>(markResponse.Body);
+                Dictionary<string, string> markNew = new Dictionary<string, string>();
+                foreach (string a in collection.Student)
                 {
                     if (mark.ContainsKey(a))
                     {
@@ -145,7 +145,7 @@ namespace WebApplication1.Controllers
                         markNew.Add(a, "Not Grade");
                     }
                 }
-                var add = client.SetAsync("Mark/" + sid, markNew);
+                Task<SetResponse> add = client.SetAsync("Mark/" + sid, markNew);
                 return RedirectToAction("Index");
             }
             catch
@@ -168,8 +168,8 @@ namespace WebApplication1.Controllers
             try
             {
                 // TODO: Add delete logic here
-                var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-                var sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+                ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+                string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
                 client = new FireSharp.FirebaseClient(config);
                 FirebaseResponse response = client.Delete("Course/" + sid + "/" + id);
                 return RedirectToAction("Index");
@@ -185,25 +185,27 @@ namespace WebApplication1.Controllers
             try
             {
 
-                var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-                var sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+                ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+                string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
 
 
                 client = new FireSharp.FirebaseClient(config);
 
 
 
-                var response = client.Get("Mark/" + sid);
-                var mark = JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Body);
+                FirebaseResponse response = client.Get("Mark/" + sid);
+                Dictionary<string, string> mark = JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Body);
 
-                var responseComment = client.Get("Comment/" + sid);
-                var Comment = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseComment.Body);
-                var b = new Dictionary<string, List<string>>();
-                foreach (var a in mark)
+                FirebaseResponse responseComment = client.Get("Comment/" + sid);
+                Dictionary<string, string> Comment = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseComment.Body);
+                Dictionary<string, List<string>> b = new Dictionary<string, List<string>>();
+                foreach (KeyValuePair<string, string> a in mark)
                 {
-                    var c = new List<string>();
-                    c.Add(JsonConvert.DeserializeObject<string>(client.Get("Account/Student/" + a.Key + "/Email").Body));
-                    c.Add(a.Value);
+                    List<string> c = new List<string>
+                    {
+                        JsonConvert.DeserializeObject<string>(client.Get("Account/Student/" + a.Key + "/Email").Body),
+                        a.Value
+                    };
                     if (Comment != null)
                     {
                         if (Comment.ContainsKey(a.Key))
@@ -235,12 +237,12 @@ namespace WebApplication1.Controllers
 
 
 
-            var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            var sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+            ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+            string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
             client = new FireSharp.FirebaseClient(config);
             FirebaseResponse response = client.Get("Link/" + sid + "/" + id);
 
-            var token = prinicpal.Claims.Where(c => c.Type == "Token").Select(c => c.Value).SingleOrDefault();
+            string token = prinicpal.Claims.Where(c => c.Type == "Token").Select(c => c.Value).SingleOrDefault();
 
             List<string> nameFile = new List<string>();
             List<string> link = new List<string>();
@@ -249,10 +251,10 @@ namespace WebApplication1.Controllers
 
                 List<string> a = JsonConvert.DeserializeObject<List<string>>(response.Body);
 
-                foreach (var item in a)
+                foreach (string item in a)
                 {
 
-                    var task = await new FirebaseStorage(Bucket, new FirebaseStorageOptions
+                    string task = await new FirebaseStorage(Bucket, new FirebaseStorageOptions
                     {
                         AuthTokenAsyncFactory = () => Task.FromResult(token),
                         ThrowOnCancel = true
@@ -267,8 +269,8 @@ namespace WebApplication1.Controllers
 
             FirebaseResponse firebase = client.Get("Course/" + sid);
 
-            var dateEnd = JsonConvert.DeserializeObject<Course>(firebase.Body).dateEnd;
-            var dateNow = DateTime.Now;
+            DateTime dateEnd = JsonConvert.DeserializeObject<Course>(firebase.Body).dateEnd;
+            DateTime dateNow = DateTime.Now;
             if (dateEnd > dateNow)
             {
                 canMark = true;
@@ -278,9 +280,9 @@ namespace WebApplication1.Controllers
                 canMark = true;
             }
 
-            var responseComment = client.Get("Comment/" + sid + "/" + id);
-            var responseGrade = client.Get("Mark/" + sid + "/" + id);
-            var Comment = JsonConvert.DeserializeObject<string>(responseComment.Body);
+            FirebaseResponse responseComment = client.Get("Comment/" + sid + "/" + id);
+            FirebaseResponse responseGrade = client.Get("Mark/" + sid + "/" + id);
+            string Comment = JsonConvert.DeserializeObject<string>(responseComment.Body);
             ViewData["nameFile"] = nameFile;
             ViewData["link"] = link;
             ViewData["canMark"] = canMark;
@@ -292,22 +294,25 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public async Task<ActionResult> Marking(string id, string grade, string comment)
         {
-            var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            var sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+            ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+            string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
             client = new FireSharp.FirebaseClient(config);
-            var studentGrade = new Dictionary<string, string>();
-            studentGrade.Add(id, grade);
+            Dictionary<string, string> studentGrade = new Dictionary<string, string>
+            {
+                { id, grade }
+            };
 
-            var studentComment = new Dictionary<string, string>();
-            
-            studentComment.Add(id, comment);
+            Dictionary<string, string> studentComment = new Dictionary<string, string>
+            {
+                { id, comment }
+            };
 
             if (grade == "Accept")
             {
                 int exceptional = 0;
                 if (client.Get("Exceptional/" + sid + "/" + id).Body != "null")
                 {
-                    exceptional = Int32.Parse(client.Get("Exceptional/" + sid + "/" + id).Body) + 1;
+                    exceptional = int.Parse(client.Get("Exceptional/" + sid + "/" + id).Body) + 1;
                 }
 
                 await client.SetAsync("Exceptional/" + sid + "/" + id, exceptional);

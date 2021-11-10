@@ -2,13 +2,10 @@
 using FireSharp.Interfaces;
 using FireSharp.Response;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
@@ -23,7 +20,7 @@ namespace WebApplication1.Controllers
     public class AccountController : Controller
     {
 
-        private static IFirebaseConfig config = new FireSharp.Config.FirebaseConfig
+        private static readonly IFirebaseConfig config = new FireSharp.Config.FirebaseConfig
         {
             AuthSecret = "8Qcxfs4Nx3SwBX9iLWXKtDRyQ2DHZCBATJD075aF",
             BasePath = "https://aspdata-8d746-default-rtdb.europe-west1.firebasedatabase.app/"
@@ -32,8 +29,8 @@ namespace WebApplication1.Controllers
         private static IFirebaseClient client;
 
 
-        private static string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
-        private static string Bucket = "aspdata-8d746.appspot.com";
+        private static readonly string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
+        private static readonly string Bucket = "aspdata-8d746.appspot.com";
         // GET: Account
 
         [Authorize(Roles = "Admin")]
@@ -48,9 +45,9 @@ namespace WebApplication1.Controllers
         {
             try
             {
-                var auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
+                FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
 
-                var a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
+                FirebaseAuthLink a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
 
                 client = new FireSharp.FirebaseClient(config);
 
@@ -93,7 +90,7 @@ namespace WebApplication1.Controllers
                 //model.Name = "Admin";
                 //SetResponse setResponse = client.Set("Account/" + model.role + "/" + model.id, model);
 
-                if (this.Request.IsAuthenticated)
+                if (Request.IsAuthenticated)
                 {
 
 
@@ -108,7 +105,7 @@ namespace WebApplication1.Controllers
             }
 
 
-            return this.View();
+            return View();
         }
 
         [HttpPost]
@@ -121,11 +118,11 @@ namespace WebApplication1.Controllers
 
                 if (ModelState.IsValid)
                 {
-                    var auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
-                    var ab = await auth.SignInWithEmailAndPasswordAsync(model.Email, model.Password);
+                    FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
+                    FirebaseAuthLink ab = await auth.SignInWithEmailAndPasswordAsync(model.Email, model.Password);
                     string token = ab.FirebaseToken;
 
-                    var user = ab.User;
+                    User user = ab.User;
 
                     //if(ab.User.IsEmailVerified == false)
                     //{
@@ -137,14 +134,14 @@ namespace WebApplication1.Controllers
                         ModelState.AddModelError("error", "Invalid username or password.");
                         return View(model);
                     }
-                    var claims = new List<Claim>();
+                    List<Claim> claims = new List<Claim>();
                     client = new FireSharp.FirebaseClient(config);
 
 
 
                     string[] role = { "Admin", "Guest", "Marketing Coordinator", "Marketing Manager", "Student" };
                     FirebaseResponse enable = client.Get("");
-                    foreach (var test in role)
+                    foreach (string test in role)
                     {
                         enable = client.Get("Account/" + test + "/" + user.LocalId);
                         if (enable.Body != "null")
@@ -180,15 +177,15 @@ namespace WebApplication1.Controllers
                         claims.Add(new Claim("Role", data.role));
 
 
-                        var claimIdenties = new ClaimsIdentity(claims, DefaultAuthenticationTypes.ApplicationCookie);
+                        ClaimsIdentity claimIdenties = new ClaimsIdentity(claims, DefaultAuthenticationTypes.ApplicationCookie);
 
-                        var ctx = Request.GetOwinContext();
-                        var authenticationManager = ctx.Authentication;
+                        Microsoft.Owin.IOwinContext ctx = Request.GetOwinContext();
+                        IAuthenticationManager authenticationManager = ctx.Authentication;
 
 
                         authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = true }, claimIdenties);
 
-                        var identity = HttpContext.User.Identity as ClaimsIdentity;
+                        ClaimsIdentity identity = HttpContext.User.Identity as ClaimsIdentity;
 
                         // Gets list of claims.
 
@@ -199,7 +196,7 @@ namespace WebApplication1.Controllers
 
                         throw ex;
                     }
-                    var a = await auth.GetUserAsync(token);
+                    User a = await auth.GetUserAsync(token);
 
                     ModelState.AddModelError("error", a.LocalId);
 
@@ -219,7 +216,7 @@ namespace WebApplication1.Controllers
             }
 
 
-            return this.View(model);
+            return View(model);
         }
 
         private void SignInUser(string email, string token, bool isPersistent)
@@ -231,12 +228,12 @@ namespace WebApplication1.Controllers
         private void ClaimIdentities(string username, bool isPersistent)
         {
 
-            var claims = new List<Claim>();
+            List<Claim> claims = new List<Claim>();
             try
             {
 
                 claims.Add(new Claim(ClaimTypes.Name, username));
-                var claimIdenties = new ClaimsIdentity(claims, DefaultAuthenticationTypes.ApplicationCookie);
+                ClaimsIdentity claimIdenties = new ClaimsIdentity(claims, DefaultAuthenticationTypes.ApplicationCookie);
 
             }
             catch (Exception ex)
@@ -254,7 +251,7 @@ namespace WebApplication1.Controllers
                 if (Url.IsLocalUrl(returnUrl))
                 {
 
-                    return this.Redirect(returnUrl);
+                    return Redirect(returnUrl);
                 }
             }
             catch (Exception ex)
@@ -264,15 +261,15 @@ namespace WebApplication1.Controllers
             }
 
 
-            return this.RedirectToAction("LogOff", "Account");
+            return RedirectToAction("LogOff", "Account");
         }
 
         [AllowAnonymous]
         [HttpGet]
         public ActionResult LogOff()
         {
-            var ctx = Request.GetOwinContext();
-            var authenticationManager = ctx.Authentication;
+            Microsoft.Owin.IOwinContext ctx = Request.GetOwinContext();
+            IAuthenticationManager authenticationManager = ctx.Authentication;
             authenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             return RedirectToAction("Login", "Account");
 

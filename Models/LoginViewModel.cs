@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication1.Models
 {
     public class LoginViewModel
     {
-        
+
         public int id { get; set; }
 
-        
+
         [DataType(DataType.Text)]
         public string role { get; set; }
         [Required]

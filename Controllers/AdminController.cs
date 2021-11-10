@@ -1,21 +1,18 @@
-﻿using FireSharp.Config;
+﻿using Firebase.Auth;
+using Firebase.Storage;
 using FireSharp.Interfaces;
 using FireSharp.Response;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using WebApplication1.Models;
-using Firebase.Auth;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using static WebApplication1.Controllers.AccountController;
-using FirebaseConfig = Firebase.Auth.FirebaseConfig;
-using System.Threading.Tasks;
 using System.Security.Claims;
 using System.Threading;
-using Firebase.Storage;
+using System.Threading.Tasks;
+using System.Web.Mvc;
+using WebApplication1.Models;
+using FirebaseConfig = Firebase.Auth.FirebaseConfig;
 
 namespace WebApplication1.Controllers
 {
@@ -24,14 +21,14 @@ namespace WebApplication1.Controllers
     [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
-        private static IFirebaseConfig config = new FireSharp.Config.FirebaseConfig
+        private static readonly IFirebaseConfig config = new FireSharp.Config.FirebaseConfig
         {
             AuthSecret = "8Qcxfs4Nx3SwBX9iLWXKtDRyQ2DHZCBATJD075aF",
             BasePath = "https://aspdata-8d746-default-rtdb.europe-west1.firebasedatabase.app/"
         };
         private static IFirebaseClient client;
-        private static string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
-        private static string Bucket = "aspdata-8d746.appspot.com";
+        private static readonly string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
+        private static readonly string Bucket = "aspdata-8d746.appspot.com";
 
 
 
@@ -40,16 +37,18 @@ namespace WebApplication1.Controllers
         {
             client = new FireSharp.FirebaseClient(config);
             string[] roleList = { "Admin", "Marketing Coordinator", "Marketing Manager", "Guest", "Student" };
-            var list = new List<SignUpModel>();
+            List<SignUpModel> list = new List<SignUpModel>();
             foreach (string role in roleList)
             {
                 FirebaseResponse response = client.Get("Account/" + role);
                 dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
                 if (data != null)
-                    foreach (var item in data)
+                {
+                    foreach (dynamic item in data)
                     {
                         list.Add(JsonConvert.DeserializeObject<SignUpModel>(((JProperty)item).Value.ToString()));
                     }
+                }
             }
             return View(list);
         }
@@ -82,8 +81,8 @@ namespace WebApplication1.Controllers
             {
                 if (signUpModel.Email != oldEmail || signUpModel.Password != oldPassword)
                 {
-                    var auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
-                    var token = await auth.SignInWithEmailAndPasswordAsync(oldEmail, oldPassword);
+                    FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
+                    FirebaseAuthLink token = await auth.SignInWithEmailAndPasswordAsync(oldEmail, oldPassword);
                     await auth.LinkAccountsAsync(token, signUpModel.Email, signUpModel.Password);
                 }
                 client = new FireSharp.FirebaseClient(config);
@@ -126,16 +125,16 @@ namespace WebApplication1.Controllers
         {
             client = new FireSharp.FirebaseClient(config);
 
-            var students = new List<string>();
-            var mags = new List<string>();
+            List<string> students = new List<string>();
+            List<string> mags = new List<string>();
 
             FirebaseResponse response = client.Get("Student/");
 
-            var dynamic = JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Body);
+            Dictionary<string, string> dynamic = JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Body);
 
             if (response.Body != "null")
             {
-                foreach (var a in dynamic)
+                foreach (KeyValuePair<string, string> a in dynamic)
                 {
                     students.Add(a.Value);
                 }
@@ -147,7 +146,7 @@ namespace WebApplication1.Controllers
 
             if (response.Body != "null")
             {
-                foreach (var a in dynamic)
+                foreach (KeyValuePair<string, string> a in dynamic)
                 {
                     mags.Add(a.Value);
                 }
@@ -174,16 +173,16 @@ namespace WebApplication1.Controllers
 
 
 
-                var studentGrade = new Dictionary<string, string>();
+                Dictionary<string, string> studentGrade = new Dictionary<string, string>();
                 if (collection.Student != null)
                 {
-                    foreach (var a in collection.Student)
+                    foreach (string a in collection.Student)
                     {
                         studentGrade.Add(a, "Not Grade");
                     }
                 }
 
-                var add = await client.UpdateAsync("Mark/" + collection.Coordinator, studentGrade);
+                FirebaseResponse add = await client.UpdateAsync("Mark/" + collection.Coordinator, studentGrade);
                 return RedirectToAction("IndexCourse");
             }
             catch (Exception ex)
@@ -207,9 +206,9 @@ namespace WebApplication1.Controllers
             client = new FireSharp.FirebaseClient(config);
             FirebaseResponse response = client.Get("Course/" + coordinator);
 
-            var courses = new Course();
+            Course courses = new Course();
             Course data = JsonConvert.DeserializeObject<Course>(response.Body);
-            var json = string.Format("[{0}]", data);
+            string json = string.Format("[{0}]", data);
             client = new FireSharp.FirebaseClient(config);
 
 
@@ -229,15 +228,15 @@ namespace WebApplication1.Controllers
                     FirebaseResponse response = await client.GetAsync("Course/" + collection.Coordinator);
                     Course data = JsonConvert.DeserializeObject<Course>(response.Body);
                     collection.dateEnd = data.dateEnd;
-                    
+
                 }
-                if(collection.dateFinal == DateTime.Parse("1/1/0001 12:00:00 AM"))
+                if (collection.dateFinal == DateTime.Parse("1/1/0001 12:00:00 AM"))
                 {
                     FirebaseResponse response = await client.GetAsync("Course/" + collection.Coordinator);
                     Course data = JsonConvert.DeserializeObject<Course>(response.Body);
                     collection.dateFinal = data.dateFinal;
                 }
-                if(collection.dateFinal < collection.dateEnd)
+                if (collection.dateFinal < collection.dateEnd)
                 {
                     collection.dateFinal = collection.dateEnd;
                 }
@@ -245,14 +244,14 @@ namespace WebApplication1.Controllers
                 await client.SetAsync("Course/" + collection.Coordinator, collection);
 
 
-                var markResponse1 = await client.GetAsync("Mark/" + collection.Coordinator);
-                var mark1 = JsonConvert.DeserializeObject<Dictionary<string, string>>(markResponse1.Body);
-                var markNew1 = new Dictionary<string, string>();
+                FirebaseResponse markResponse1 = await client.GetAsync("Mark/" + collection.Coordinator);
+                Dictionary<string, string> mark1 = JsonConvert.DeserializeObject<Dictionary<string, string>>(markResponse1.Body);
+                Dictionary<string, string> markNew1 = new Dictionary<string, string>();
                 if (markResponse1.Body != "null")
                 {
                     if (collection.Student != null)
                     {
-                        foreach (var a in collection.Student)
+                        foreach (string a in collection.Student)
                         {
                             if (mark1.ContainsKey(a))
                             {
@@ -263,7 +262,7 @@ namespace WebApplication1.Controllers
                                 markNew1.Add(a, "Not Grade");
                             }
                         }
-                        var add = await client.SetAsync("Mark/" + collection.Coordinator, markNew1);
+                        SetResponse add = await client.SetAsync("Mark/" + collection.Coordinator, markNew1);
                     }
                     else
                     {
@@ -274,11 +273,11 @@ namespace WebApplication1.Controllers
                 {
                     if (collection.Student != null)
                     {
-                        foreach (var a in collection.Student)
+                        foreach (string a in collection.Student)
                         {
                             markNew1.Add(a, "Not Grade");
                         }
-                        var add = await client.SetAsync("Mark/" + collection.Coordinator, markNew1);
+                        SetResponse add = await client.SetAsync("Mark/" + collection.Coordinator, markNew1);
                     }
                     else
                     {
@@ -302,36 +301,38 @@ namespace WebApplication1.Controllers
         {
             client = new FireSharp.FirebaseClient(config);
             string[] roleList = { "Marketing Coordinator" };
-            var list = new List<SignUpModel>();
+            List<SignUpModel> list = new List<SignUpModel>();
             foreach (string role in roleList)
             {
                 FirebaseResponse response = client.Get("Account/" + role);
                 dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
                 if (data != null)
-                    foreach (var item in data)
+                {
+                    foreach (dynamic item in data)
                     {
                         list.Add(JsonConvert.DeserializeObject<SignUpModel>(((JProperty)item).Value.ToString()));
                     }
+                }
             }
-            var editorials = new List<Course>();
-            var mail = new Dictionary<string, string>();
-            foreach (var id in list)
+            List<Course> editorials = new List<Course>();
+            Dictionary<string, string> mail = new Dictionary<string, string>();
+            foreach (SignUpModel id in list)
             {
                 FirebaseResponse response = client.Get("Course/" + id.id);
                 if (response.Body != "null")
                 {
                     dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
-                    var json = string.Format("[{0}]", data);
+                    dynamic json = string.Format("[{0}]", data);
                     Course[] editorial = JsonConvert.DeserializeObject<Course[]>(json);
                     editorials.Add(editorial[0]);
                     mail.Add(editorial[0].Coordinator, JsonConvert.DeserializeObject<string>(client.Get("Account/Marketing Coordinator/" + editorial[0].Coordinator + "/Email").Body));
                 }
 
             }
-            var guest = client.Get("Guest/");
+            FirebaseResponse guest = client.Get("Guest/");
             if (guest.Body != "null")
             {
-                var guests = JsonConvert.DeserializeObject<Dictionary<string, string>>(guest.Body);
+                Dictionary<string, string> guests = JsonConvert.DeserializeObject<Dictionary<string, string>>(guest.Body);
                 ViewData["guests"] = guests;
             }
             ViewData["mail"] = mail;
@@ -371,15 +372,17 @@ namespace WebApplication1.Controllers
         {
             client = new FireSharp.FirebaseClient(config);
 
-            var response = client.Get("Account/Marketing Coordinator/");
+            FirebaseResponse response = client.Get("Account/Marketing Coordinator/");
 
             List<SignUpModel> co = new List<SignUpModel>();
-            var data = JsonConvert.DeserializeObject<dynamic>(response.Body);
+            dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
             if (data != null)
-                foreach (var item in data)
+            {
+                foreach (dynamic item in data)
                 {
                     co.Add(JsonConvert.DeserializeObject<SignUpModel>(((JProperty)item).Value.ToString()));
                 }
+            }
 
             ViewData["co"] = co;
 
@@ -391,9 +394,9 @@ namespace WebApplication1.Controllers
             try
             {
                 model.role = "Student";
-                var auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
+                FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
 
-                var a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
+                FirebaseAuthLink a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
 
 
 
@@ -402,13 +405,13 @@ namespace WebApplication1.Controllers
                 model.id = a.User.LocalId;
                 SetResponse setResponse = client.Set("Account/" + model.role + "/" + model.id, model);
 
-                var student = client.Get("Course/" + co + "/Student").Body;
+                string student = client.Get("Course/" + co + "/Student").Body;
 
                 List<string> students = new List<string>();
                 if (student != "null")
                 {
                     List<string> add = JsonConvert.DeserializeObject<List<string>>(student);
-                    foreach (var item in add)
+                    foreach (string item in add)
                     {
                         students.Add(item);
                     }
@@ -440,11 +443,11 @@ namespace WebApplication1.Controllers
         public async Task<ActionResult> CreateAdmin(SignUpModel model)
         {
             model.role = "Admin";
-            var auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
+            FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
 
             try
             {
-                var a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
+                FirebaseAuthLink a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
                 client = new FireSharp.FirebaseClient(config);
 
                 model.id = a.User.LocalId;
@@ -473,29 +476,31 @@ namespace WebApplication1.Controllers
         {
 
             client = new FireSharp.FirebaseClient(config);
-            
+
             string[] roleList = { "Marketing Coordinator" };
-            var list = new List<SignUpModel>();
+            List<SignUpModel> list = new List<SignUpModel>();
             foreach (string role in roleList)
             {
                 FirebaseResponse response = client.Get("Account/" + role);
                 dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
                 if (data != null)
-                    foreach (var item in data)
+                {
+                    foreach (dynamic item in data)
                     {
                         list.Add(JsonConvert.DeserializeObject<SignUpModel>(((JProperty)item).Value.ToString()));
                     }
+                }
             }
 
-            var courses = new List<Course>();
-            foreach (var id in list)
+            List<Course> courses = new List<Course>();
+            foreach (SignUpModel id in list)
             {
 
                 FirebaseResponse response = client.Get("Course/" + id.id);
                 if (response.Body != "null")
                 {
                     dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
-                    var json = string.Format("[{0}]", data);
+                    dynamic json = string.Format("[{0}]", data);
                     Course[] editorial = JsonConvert.DeserializeObject<Course[]>(json);
                     if (editorial[0].nameCourse == nameCourse)
                     {
@@ -509,21 +514,22 @@ namespace WebApplication1.Controllers
             try
             {
                 model.role = "Marketing Coordinator";
-                var auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
+                FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
 
-                var a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
+                FirebaseAuthLink a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
 
                 client = new FireSharp.FirebaseClient(config);
 
                 model.id = a.User.LocalId;
                 SetResponse setResponse = client.Set("Account/" + model.role + "/" + model.id, model);
 
-                Course course = new Course();
-
-                course.Coordinator = model.id;
-                course.dateEnd = DateTime.Parse("1/1/0001 12:00:00 AM");
-                course.dateFinal = DateTime.Parse("1/1/0001 12:00:00 AM");
-                course.nameCourse = nameCourse;
+                Course course = new Course
+                {
+                    Coordinator = model.id,
+                    dateEnd = DateTime.Parse("1/1/0001 12:00:00 AM"),
+                    dateFinal = DateTime.Parse("1/1/0001 12:00:00 AM"),
+                    nameCourse = nameCourse
+                };
 
                 await client.SetAsync("Course/" + model.id, course);
                 ModelState.AddModelError(string.Empty, "Ok");
@@ -548,9 +554,9 @@ namespace WebApplication1.Controllers
             try
             {
                 model.role = "Marketing Manager";
-                var auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
+                FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
 
-                var a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
+                FirebaseAuthLink a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
 
                 client = new FireSharp.FirebaseClient(config);
 
@@ -573,17 +579,18 @@ namespace WebApplication1.Controllers
         {
             client = new FireSharp.FirebaseClient(config);
 
-            var response = client.Get("Account/Marketing Coordinator/");
+            FirebaseResponse response = client.Get("Account/Marketing Coordinator/");
 
             List<SignUpModel> co = new List<SignUpModel>();
-            var data = JsonConvert.DeserializeObject<dynamic>(response.Body);
+            dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
 
             response = client.Get("Guest/");
-            var guested = JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Body);
+            Dictionary<string, string> guested = JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Body);
             if (data != null)
+            {
                 if (response.Body == "null")
                 {
-                    foreach (var item in data)
+                    foreach (dynamic item in data)
                     {
                         co.Add(JsonConvert.DeserializeObject<SignUpModel>(((JProperty)item).Value.ToString()));
 
@@ -592,16 +599,16 @@ namespace WebApplication1.Controllers
                 }
                 else
                 {
-                    foreach (var item in data)
+                    foreach (dynamic item in data)
                     {
-                        var a = JsonConvert.DeserializeObject<SignUpModel>(((JProperty)item).Value.ToString());
+                        SignUpModel a = JsonConvert.DeserializeObject<SignUpModel>(((JProperty)item).Value.ToString());
                         if (guested.ContainsKey(a.id) == false)
                         {
                             co.Add(a);
                         }
                     }
                 }
-
+            }
 
             ViewData["co"] = co;
 
@@ -614,9 +621,9 @@ namespace WebApplication1.Controllers
             try
             {
                 model.role = "Guest";
-                var auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
+                FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
 
-                var a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
+                FirebaseAuthLink a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
 
 
 
@@ -624,18 +631,20 @@ namespace WebApplication1.Controllers
 
                 model.id = a.User.LocalId;
                 SetResponse setResponse = client.Set("Account/" + model.role + "/" + model.id, model);
-                var guest = client.Get("Guest/").Body;
+                string guest = client.Get("Guest/").Body;
                 if (guest != "null")
                 {
-                    var b = JsonConvert.DeserializeObject<Dictionary<string, string>>(guest);
+                    Dictionary<string, string> b = JsonConvert.DeserializeObject<Dictionary<string, string>>(guest);
                     b.Add(co, model.id);
 
                     await client.SetAsync("Guest/", b);
                 }
                 else
                 {
-                    Dictionary<string, string> b = new Dictionary<string, string>();
-                    b.Add(co, model.id);
+                    Dictionary<string, string> b = new Dictionary<string, string>
+                    {
+                        { co, model.id }
+                    };
 
                     await client.SetAsync("Guest/", b);
                 }
@@ -682,21 +691,23 @@ namespace WebApplication1.Controllers
 
             ViewData["coordinator"] = coordinator;
 
-            var response = client.Get("Mark/" + coordinator);
-            var mark = JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Body);
+            FirebaseResponse response = client.Get("Mark/" + coordinator);
+            Dictionary<string, string> mark = JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Body);
 
-            var responseComment = client.Get("Comment/" + coordinator);
-            var Comment = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseComment.Body);
+            FirebaseResponse responseComment = client.Get("Comment/" + coordinator);
+            Dictionary<string, string> Comment = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseComment.Body);
 
-            var b = new Dictionary<string, List<string>>();
-            var mail = new Dictionary<string, string>();
+            Dictionary<string, List<string>> b = new Dictionary<string, List<string>>();
+            Dictionary<string, string> mail = new Dictionary<string, string>();
             if (mark != null)
             {
-                foreach (var a in mark)
+                foreach (KeyValuePair<string, string> a in mark)
                 {
                     mail.Add(a.Key, JsonConvert.DeserializeObject<string>(client.Get("Account/Student/" + a.Key + "/Email").Body));
-                    var c = new List<string>();
-                    c.Add(a.Value);
+                    List<string> c = new List<string>
+                    {
+                        a.Value
+                    };
                     if (Comment != null)
                     {
                         if (Comment.ContainsKey(a.Key))
@@ -728,8 +739,8 @@ namespace WebApplication1.Controllers
 
             client = new FireSharp.FirebaseClient(config);
             FirebaseResponse response = client.Get("Link/" + coordinator + "/" + Student);
-            var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            var token = prinicpal.Claims.Where(c => c.Type == "Token").Select(c => c.Value).SingleOrDefault();
+            ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+            string token = prinicpal.Claims.Where(c => c.Type == "Token").Select(c => c.Value).SingleOrDefault();
 
             List<string> nameFile = new List<string>();
             List<string> link = new List<string>();
@@ -738,10 +749,10 @@ namespace WebApplication1.Controllers
 
                 List<string> a = JsonConvert.DeserializeObject<List<string>>(response.Body);
 
-                foreach (var item in a)
+                foreach (string item in a)
                 {
 
-                    var task = await new FirebaseStorage(Bucket, new FirebaseStorageOptions
+                    string task = await new FirebaseStorage(Bucket, new FirebaseStorageOptions
                     {
                         AuthTokenAsyncFactory = () => Task.FromResult(token),
                         ThrowOnCancel = true
@@ -777,14 +788,14 @@ namespace WebApplication1.Controllers
         public async System.Threading.Tasks.Task<ActionResult> Delete(SignUpModel model)
         {
             client = new FireSharp.FirebaseClient(config);
-            var auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
+            FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
 
-            var a = await auth.SignInWithEmailAndPasswordAsync(model.Email, model.Password);
+            FirebaseAuthLink a = await auth.SignInWithEmailAndPasswordAsync(model.Email, model.Password);
 
             if (model.role == "Marketing Coordinator")
             {
-                var test1 = await client.GetAsync("Course/" + a.User.LocalId + "/Student");
-                var test2 = await client.GetAsync("Guest/" + a.User.LocalId);
+                FirebaseResponse test1 = await client.GetAsync("Course/" + a.User.LocalId + "/Student");
+                FirebaseResponse test2 = await client.GetAsync("Guest/" + a.User.LocalId);
                 if (test1.Body != "null" || test2.Body != "null")
                 {
                     ModelState.AddModelError(string.Empty, "Delete student and guest in this Marketing Coordinator first");
@@ -801,27 +812,29 @@ namespace WebApplication1.Controllers
             else if (model.role == "Student")
             {
                 string[] roleList = { "Marketing Coordinator" };
-                var list = new List<SignUpModel>();
+                List<SignUpModel> list = new List<SignUpModel>();
                 foreach (string role in roleList)
                 {
                     FirebaseResponse response = client.Get("Account/" + role);
                     dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
                     if (data != null)
-                        foreach (var item in data)
+                    {
+                        foreach (dynamic item in data)
                         {
                             list.Add(JsonConvert.DeserializeObject<SignUpModel>(((JProperty)item).Value.ToString()));
                         }
+                    }
                 }
 
-                var courses = new List<Course>();
-                foreach (var id in list)
+                List<Course> courses = new List<Course>();
+                foreach (SignUpModel id in list)
                 {
 
                     FirebaseResponse response = client.Get("Course/" + id.id);
                     if (response.Body != "null")
                     {
                         dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
-                        var json = string.Format("[{0}]", data);
+                        dynamic json = string.Format("[{0}]", data);
                         Course[] editorial = JsonConvert.DeserializeObject<Course[]>(json);
                         if (editorial[0].Student != null)
                         {
@@ -834,10 +847,10 @@ namespace WebApplication1.Controllers
 
                     }
                 }
-                var b1 = client.Get("Course/" + courses[0].Coordinator + "/Student").Body;
+                string b1 = client.Get("Course/" + courses[0].Coordinator + "/Student").Body;
                 if (b1 != "null")
                 {
-                    var b = JsonConvert.DeserializeObject<List<string>>(b1);
+                    List<string> b = JsonConvert.DeserializeObject<List<string>>(b1);
 
                     b.Remove(a.User.LocalId);
                     await client.SetAsync("Course/" + courses[0].Coordinator + "/Student", b);
@@ -847,11 +860,11 @@ namespace WebApplication1.Controllers
                 await client.DeleteAsync("Comment/" + courses[0].Coordinator + "/" + a.User.LocalId);
                 await client.DeleteAsync("Mark/" + courses[0].Coordinator + "/" + a.User.LocalId);
                 await client.DeleteAsync("Exceptional/" + courses[0].Coordinator + "/" + a.User.LocalId);
-                
-                var d = client.Get("Link/" + courses[0].Coordinator + "/student").Body;
+
+                string d = client.Get("Link/" + courses[0].Coordinator + "/student").Body;
                 if (d != "null")
                 {
-                    var c = JsonConvert.DeserializeObject<List<string>>(d);
+                    List<string> c = JsonConvert.DeserializeObject<List<string>>(d);
 
                     c.Remove(a.User.LocalId);
                     await client.SetAsync("Link/" + courses[0].Coordinator + "/student", c);
@@ -860,10 +873,10 @@ namespace WebApplication1.Controllers
             }
             else if (model.role == "Guest")
             {
-                var guest = client.Get("Guest/").Body;
-                var b = JsonConvert.DeserializeObject<Dictionary<string, string>>(guest);
+                string guest = client.Get("Guest/").Body;
+                Dictionary<string, string> b = JsonConvert.DeserializeObject<Dictionary<string, string>>(guest);
 
-                var item = b.First(kvp => kvp.Value == a.User.LocalId);
+                KeyValuePair<string, string> item = b.First(kvp => kvp.Value == a.User.LocalId);
 
                 b.Remove(item.Key);
                 if (b.Count > 0)

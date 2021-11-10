@@ -4,13 +4,11 @@ using Syncfusion.DocIO.DLS;
 using Syncfusion.DocToPDFConverter;
 using Syncfusion.Pdf;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Security.Claims;
 using System.Threading;
-using System.Web;
 using System.Web.Mvc;
 
 namespace WebApplication1.Controllers
@@ -21,8 +19,8 @@ namespace WebApplication1.Controllers
         // GET: PreviewWord
         public ActionResult Read(string path)
         {
-            var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            var sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+            ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+            string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
 
             string fileName = Request.MapPath("~/Content/images/" + sid + ".docx");
 
@@ -60,8 +58,8 @@ namespace WebApplication1.Controllers
 
         public ActionResult WordToPdf(string path, string name)
         {
-            var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            var sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+            ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+            string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
 
             string fileName = Request.MapPath("~/Content/images/" + sid);
 
@@ -82,7 +80,7 @@ namespace WebApplication1.Controllers
             string fullpath = Server.MapPath("~/Content/images/" + sid + "/" + name);
             byte[] FileBytes = System.IO.File.ReadAllBytes(ConvertWordToPdf(fullpath, name, sid));
 
-            var contentLength = FileBytes.Length;
+            int contentLength = FileBytes.Length;
             Response.AppendHeader("Content-Length", contentLength.ToString());
             Response.AppendHeader("Content-Disposition", "inline; filename=" + name + ".pdf");
 

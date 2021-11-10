@@ -1,13 +1,8 @@
-﻿using Firebase.Auth;
-using Firebase.Storage;
+﻿using Firebase.Storage;
 using FireSharp.Interfaces;
 using FireSharp.Response;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Syncfusion.DocIO;
-using Syncfusion.DocIO.DLS;
-using Syncfusion.DocToPDFConverter;
-using Syncfusion.Pdf;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,7 +16,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using System.Windows.Forms;
 using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
@@ -29,43 +23,45 @@ namespace WebApplication1.Controllers
     [Authorize(Roles = "Student")]
     public class StudentController : Controller
     {
-        private static IFirebaseConfig config = new FireSharp.Config.FirebaseConfig
+        private static readonly IFirebaseConfig config = new FireSharp.Config.FirebaseConfig
         {
             AuthSecret = "8Qcxfs4Nx3SwBX9iLWXKtDRyQ2DHZCBATJD075aF",
             BasePath = "https://aspdata-8d746-default-rtdb.europe-west1.firebasedatabase.app/"
         };
         private static IFirebaseClient client;
-        private static string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
-        private static string Bucket = "aspdata-8d746.appspot.com";
+        private static readonly string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
+        private static readonly string Bucket = "aspdata-8d746.appspot.com";
 
         // GET: Student
         public ActionResult Index()
         {
             client = new FireSharp.FirebaseClient(config);
-            var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            var sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+            ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+            string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
             string[] roleList = { "Marketing Coordinator" };
-            var list = new List<SignUpModel>();
+            List<SignUpModel> list = new List<SignUpModel>();
             foreach (string role in roleList)
             {
                 FirebaseResponse response = client.Get("Account/" + role);
                 dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
                 if (data != null)
-                    foreach (var item in data)
+                {
+                    foreach (dynamic item in data)
                     {
                         list.Add(JsonConvert.DeserializeObject<SignUpModel>(((JProperty)item).Value.ToString()));
                     }
+                }
             }
 
-            var courses = new List<Course>();
-            foreach (var id in list)
+            List<Course> courses = new List<Course>();
+            foreach (SignUpModel id in list)
             {
 
                 FirebaseResponse response = client.Get("Course/" + id.id);
                 if (response.Body != "null")
                 {
                     dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
-                    var json = string.Format("[{0}]", data);
+                    dynamic json = string.Format("[{0}]", data);
                     Course[] editorial = JsonConvert.DeserializeObject<Course[]>(json);
                     if (editorial[0].Student != null)
                     {
@@ -80,21 +76,23 @@ namespace WebApplication1.Controllers
             }
 
 
-            var mk = new Dictionary<string, List<string>>();
-            foreach (var item in courses)
+            Dictionary<string, List<string>> mk = new Dictionary<string, List<string>>();
+            foreach (Course item in courses)
             {
-                var response = client.Get("Mark/" + item.Coordinator + "/" + sid);
-                var mark = JsonConvert.DeserializeObject<string>(response.Body);
+                FirebaseResponse response = client.Get("Mark/" + item.Coordinator + "/" + sid);
+                string mark = JsonConvert.DeserializeObject<string>(response.Body);
 
-                var responseComment = client.Get("Comment/" + item.Coordinator + "/" + sid);
-                var Comment = JsonConvert.DeserializeObject<string>(responseComment.Body);
+                FirebaseResponse responseComment = client.Get("Comment/" + item.Coordinator + "/" + sid);
+                string Comment = JsonConvert.DeserializeObject<string>(responseComment.Body);
 
-                
 
-                List<string> ma = new List<string>();
-                ma.Add(JsonConvert.DeserializeObject<string>(client.Get("Account/Marketing Coordinator/" + item.Coordinator + "/Email").Body));
-                ma.Add(mark);
-                ma.Add(Comment);
+
+                List<string> ma = new List<string>
+                {
+                    JsonConvert.DeserializeObject<string>(client.Get("Account/Marketing Coordinator/" + item.Coordinator + "/Email").Body),
+                    mark,
+                    Comment
+                };
                 mk.Add(item.Coordinator, ma);
 
             }
@@ -110,9 +108,9 @@ namespace WebApplication1.Controllers
             {
                 return RedirectToAction("index");
             }
-            var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            var sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
-            var token = prinicpal.Claims.Where(c => c.Type == "Token").Select(c => c.Value).SingleOrDefault();
+            ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+            string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+            string token = prinicpal.Claims.Where(c => c.Type == "Token").Select(c => c.Value).SingleOrDefault();
             FirebaseResponse response = client.Get("Link/" + coordinator + "/" + sid + "/");
             List<string> nameFile = new List<string>();
             List<string> link = new List<string>();
@@ -121,10 +119,10 @@ namespace WebApplication1.Controllers
 
                 List<string> a = JsonConvert.DeserializeObject<List<string>>(response.Body);
 
-                foreach (var item in a)
+                foreach (string item in a)
                 {
 
-                    var task = await new FirebaseStorage(Bucket, new FirebaseStorageOptions
+                    string task = await new FirebaseStorage(Bucket, new FirebaseStorageOptions
                     {
                         AuthTokenAsyncFactory = () => Task.FromResult(token),
                         ThrowOnCancel = true
@@ -139,9 +137,9 @@ namespace WebApplication1.Controllers
             }
             response = client.Get("Course/" + coordinator);
 
-            var dateEnd = JsonConvert.DeserializeObject<Course>(response.Body).dateEnd;
-            var dateFinal = JsonConvert.DeserializeObject<Course>(response.Body).dateFinal;
-            var dateNow = DateTime.Now;
+            DateTime dateEnd = JsonConvert.DeserializeObject<Course>(response.Body).dateEnd;
+            DateTime dateFinal = JsonConvert.DeserializeObject<Course>(response.Body).dateFinal;
+            DateTime dateNow = DateTime.Now;
             if (dateEnd > dateNow)
             {
                 ViewData["canSubmit"] = true;
@@ -184,8 +182,8 @@ namespace WebApplication1.Controllers
                 if (file.ContentLength > 0)
                 {
                     client = new FireSharp.FirebaseClient(config);
-                    var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-                    var sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+                    ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+                    string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
                     string path = Path.Combine(Server.MapPath("~/Content/images/"), file.FileName);
                     file.SaveAs(path);
                     stream = new FileStream(Path.Combine(path), FileMode.Open);
@@ -196,12 +194,12 @@ namespace WebApplication1.Controllers
 
 
                     FirebaseResponse response = client.Get("Link/" + coordinator + "/" + sid);
-                    var name = stream.Name.Split(new string[] { "\\" }, StringSplitOptions.None).Last();
+                    string name = stream.Name.Split(new string[] { "\\" }, StringSplitOptions.None).Last();
                     if (response.Body != "null")
                     {
-                        var a = JsonConvert.DeserializeObject<string[]>(response.Body);
+                        string[] a = JsonConvert.DeserializeObject<string[]>(response.Body);
 
-                        foreach (var item in a)
+                        foreach (string item in a)
                         {
                             names.Add(item);
                             if (item == name)
@@ -236,7 +234,7 @@ namespace WebApplication1.Controllers
                     if (response1.Body != "null")
                     {
                         List<string> a = JsonConvert.DeserializeObject<List<string>>(response1.Body);
-                        foreach (var item in a)
+                        foreach (string item in a)
                         {
                             student.Add(item);
                             if (item == sid)
@@ -250,20 +248,20 @@ namespace WebApplication1.Controllers
                     //System.Threading.Thread.Sleep(10000);
                     await client.SetAsync("Link/" + coordinator + "/" + "/student", student);
 
-                    var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
-                    var message = new MailMessage();
-                    message.To.Add(new MailAddress(JsonConvert.DeserializeObject<string>(client.Get("Account/Marketing Coordinator/" + coordinator + "/Email/").Body))); 
+                    string body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
+                    MailMessage message = new MailMessage();
+                    message.To.Add(new MailAddress(JsonConvert.DeserializeObject<string>(client.Get("Account/Marketing Coordinator/" + coordinator + "/Email/").Body)));
                     message.From = new MailAddress("thuyenprovjp@outlook.com.vn");  // replace with valid value
                     message.Subject = JsonConvert.DeserializeObject<string>(client.Get("Account/Marketing Coordinator/" + coordinator + "/Email/").Body) + "has given submitions to get feedback";
                     message.Body = string.Format(body, "Donotreply", "thuyenprovjp@outlook.com.vn", "Student " + sid + " submited");
                     message.IsBodyHtml = true;
 
-                    using (var smtp = new SmtpClient())
+                    using (SmtpClient smtp = new SmtpClient())
                     {
-                        var credential = new NetworkCredential
+                        NetworkCredential credential = new NetworkCredential
                         {
-                            UserName = "thuyenprovjp@outlook.com.vn",  
-                            Password = "provjp112233"  
+                            UserName = "thuyenprovjp@outlook.com.vn",
+                            Password = "provjp112233"
                         };
                         smtp.Credentials = credential;
                         smtp.Host = "smtp-mail.outlook.com";
@@ -272,100 +270,100 @@ namespace WebApplication1.Controllers
                         await smtp.SendMailAsync(message);
                     }
 
-                        //SmtpClient client1 = new SmtpClient();
+                    //SmtpClient client1 = new SmtpClient();
 
-                        //client1.Credentials = new NetworkCredential("bphamngocbao@outlook.com.vn", "Crt112233");
-                        //client1.UseDefaultCredentials = false;
-                        //client1.Port = 587;
-                        //client1.Host = "smtp-mail.outlook.com";
-                        //client1.EnableSsl = true;
+                    //client1.Credentials = new NetworkCredential("bphamngocbao@outlook.com.vn", "Crt112233");
+                    //client1.UseDefaultCredentials = false;
+                    //client1.Port = 587;
+                    //client1.Host = "smtp-mail.outlook.com";
+                    //client1.EnableSsl = true;
 
-                        //try
-                        //{
-                        //    MailAddress
-                        //        maFrom = new MailAddress("exitlag1m1@gmail.com", "Student Name", Encoding.UTF8),
-                        //        maTo = new MailAddress(JsonConvert.DeserializeObject<string>(client.Get("Account/Marketing Coordinator/" + coordinator + "/Email/").Body), JsonConvert.DeserializeObject<string>(client.Get("Account/Marketing Coordinator/" + coordinator + "/Name/").Body), Encoding.UTF8);
-                        //    MailMessage mmsg = new MailMessage(maFrom.Address, maTo.Address);
-                        //    mmsg.Body = "<html><body><h1>Student " + sid + " Submit</h1></body></html>";
-                        //    mmsg.BodyEncoding = Encoding.UTF8;
-                        //    mmsg.IsBodyHtml = true;
-                        //    mmsg.Subject = "Mark";
-                        //    mmsg.SubjectEncoding = Encoding.UTF8;
+                    //try
+                    //{
+                    //    MailAddress
+                    //        maFrom = new MailAddress("exitlag1m1@gmail.com", "Student Name", Encoding.UTF8),
+                    //        maTo = new MailAddress(JsonConvert.DeserializeObject<string>(client.Get("Account/Marketing Coordinator/" + coordinator + "/Email/").Body), JsonConvert.DeserializeObject<string>(client.Get("Account/Marketing Coordinator/" + coordinator + "/Name/").Body), Encoding.UTF8);
+                    //    MailMessage mmsg = new MailMessage(maFrom.Address, maTo.Address);
+                    //    mmsg.Body = "<html><body><h1>Student " + sid + " Submit</h1></body></html>";
+                    //    mmsg.BodyEncoding = Encoding.UTF8;
+                    //    mmsg.IsBodyHtml = true;
+                    //    mmsg.Subject = "Mark";
+                    //    mmsg.SubjectEncoding = Encoding.UTF8;
 
-                        //    client1.Send(mmsg);
-                        //    MessageBox.Show("Done");
-                        //}
-                        //catch (Exception ex)
-                        //{
-                        //    MessageBox.Show(ex.ToString(), ex.Message);
-                        //}
-
-
-
-                        
-                        //var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
-                        //var message = new MailMessage();
-                        //message.To.Add(JsonConvert.DeserializeObject<string>(client.Get("Account/Marketing Coordinator/" + coordinator + "/Email/").Body));
-                        //message.From = new MailAddress("exitlag1m1@gmail.com");
-                        //message.Subject = "Student " + sid + " submit";
-                        //string Body = "Student " + sid + " submit";
-                        //message.Body = Body;
-                        //message.IsBodyHtml = true;
-                        //SmtpClient smtp = new SmtpClient();
-
-                        //smtp.Host = "smtp.gmail.com";
-                        //smtp.EnableSsl = true;
-                        //smtp.Port = 587;
-                        ////smtp.Credentials = new System.Net.NetworkCredential("exitlag1m1@gmail.com", "Crt112233"); // Enter seders User name and password  
-                        //smtp.UseDefaultCredentials = false;
-                        //smtp.Credentials = new System.Net.NetworkCredential("exitlag1m1@gmail.com", "Crt112233");
-                        // smtp.Send(message);
-
-                        //using (var smtp = new SmtpClient())
-                        //{
-                        //    //await smtp.SendMailAsync(message);
+                    //    client1.Send(mmsg);
+                    //    MessageBox.Show("Done");
+                    //}
+                    //catch (Exception ex)
+                    //{
+                    //    MessageBox.Show(ex.ToString(), ex.Message);
+                    //}
 
 
-                        //}
 
 
-                        //var b = client.Get("Notifications").Body;
-                        //var mail = JsonConvert.DeserializeObject<Dictionary<string, string>>(b);
+                    //var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
+                    //var message = new MailMessage();
+                    //message.To.Add(JsonConvert.DeserializeObject<string>(client.Get("Account/Marketing Coordinator/" + coordinator + "/Email/").Body));
+                    //message.From = new MailAddress("exitlag1m1@gmail.com");
+                    //message.Subject = "Student " + sid + " submit";
+                    //string Body = "Student " + sid + " submit";
+                    //message.Body = Body;
+                    //message.IsBodyHtml = true;
+                    //SmtpClient smtp = new SmtpClient();
+
+                    //smtp.Host = "smtp.gmail.com";
+                    //smtp.EnableSsl = true;
+                    //smtp.Port = 587;
+                    ////smtp.Credentials = new System.Net.NetworkCredential("exitlag1m1@gmail.com", "Crt112233"); // Enter seders User name and password  
+                    //smtp.UseDefaultCredentials = false;
+                    //smtp.Credentials = new System.Net.NetworkCredential("exitlag1m1@gmail.com", "Crt112233");
+                    // smtp.Send(message);
+
+                    //using (var smtp = new SmtpClient())
+                    //{
+                    //    //await smtp.SendMailAsync(message);
 
 
-                        //var senderEmail = new MailAddress(get(mail["Mail"]), "Student submit");
-                        //var d = client.Get("Account/Marketing Coordinator/" + coordinator + "/Email/").Body;
-                        //var receiverEmail = new MailAddress(JsonConvert.DeserializeObject<string>(d));
-                        //var password = get(mail["pass"]);
-                        //var sub = "Student " + sid + " submit";
-                        //var body = "Student " + sid + " submit";
-                        //var smtp = new SmtpClient
-                        //{
-                        //    Host = "smtp.gmail.com",
-                        //    Port = 587,
-                        //    EnableSsl = true,
-                        //    DeliveryMethod = SmtpDeliveryMethod.Network,
-                        //    UseDefaultCredentials = false,
-                        //    Credentials = new NetworkCredential(senderEmail.Address, password)
-                        //};
-                        //using (var mess = new MailMessage(senderEmail, receiverEmail)
-                        //{
-                        //    Subject = sub,
-                        //    Body = body,
-                        //    Priority = MailPriority.High
-                        //})
-                        //{
-                        //    smtp.Send(mess);
-                        //}
+                    //}
 
-                    }
+
+                    //var b = client.Get("Notifications").Body;
+                    //var mail = JsonConvert.DeserializeObject<Dictionary<string, string>>(b);
+
+
+                    //var senderEmail = new MailAddress(get(mail["Mail"]), "Student submit");
+                    //var d = client.Get("Account/Marketing Coordinator/" + coordinator + "/Email/").Body;
+                    //var receiverEmail = new MailAddress(JsonConvert.DeserializeObject<string>(d));
+                    //var password = get(mail["pass"]);
+                    //var sub = "Student " + sid + " submit";
+                    //var body = "Student " + sid + " submit";
+                    //var smtp = new SmtpClient
+                    //{
+                    //    Host = "smtp.gmail.com",
+                    //    Port = 587,
+                    //    EnableSsl = true,
+                    //    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    //    UseDefaultCredentials = false,
+                    //    Credentials = new NetworkCredential(senderEmail.Address, password)
+                    //};
+                    //using (var mess = new MailMessage(senderEmail, receiverEmail)
+                    //{
+                    //    Subject = sub,
+                    //    Body = body,
+                    //    Priority = MailPriority.High
+                    //})
+                    //{
+                    //    smtp.Send(mess);
+                    //}
+
+                }
 
             }
             catch (Exception ex)
             {
                 ModelState.AddModelError(string.Empty, ex.Message);
                 System.Diagnostics.Debug.WriteLine(ex);
-                
+
             }
 
             //try
@@ -411,8 +409,8 @@ namespace WebApplication1.Controllers
         public async void up(FileStream stream, string fileName, string token, string coordinator)
         {
             client = new FireSharp.FirebaseClient(config);
-            var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            var sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+            ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+            string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
 
 
 
@@ -420,12 +418,12 @@ namespace WebApplication1.Controllers
 
 
             FirebaseResponse response = client.Get("Link/" + coordinator + "/" + sid);
-            var name = stream.Name.Split(new string[] { "\\" }, StringSplitOptions.None).Last();
+            string name = stream.Name.Split(new string[] { "\\" }, StringSplitOptions.None).Last();
             if (response.Body != "null")
             {
-                var a = JsonConvert.DeserializeObject<string[]>(response.Body);
+                string[] a = JsonConvert.DeserializeObject<string[]>(response.Body);
 
-                foreach (var item in a)
+                foreach (string item in a)
                 {
                     names.Add(item);
                     if (item == name)
@@ -441,7 +439,7 @@ namespace WebApplication1.Controllers
             names.Remove(name);
             names.Add(name);
             SetResponse setResponse = client.Set("Link/" + coordinator + "/" + sid, names);
-            var task = new FirebaseStorage(Bucket, new FirebaseStorageOptions
+            FirebaseStorageTask task = new FirebaseStorage(Bucket, new FirebaseStorageOptions
             {
                 AuthTokenAsyncFactory = () => Task.FromResult(token),
                 ThrowOnCancel = true
@@ -450,7 +448,7 @@ namespace WebApplication1.Controllers
 
             task.Progress.ProgressChanged += (s, e) => Console.WriteLine($"Progress: {e.Percentage} %");
 
-            var downloadUrl = await task;
+            string downloadUrl = await task;
 
 
         }
@@ -462,10 +460,12 @@ namespace WebApplication1.Controllers
             byte[] toEncryptArray = Convert.FromBase64String(toDecrypt);
             MD5CryptoServiceProvider hashmd5 = new MD5CryptoServiceProvider();
             keyArray = hashmd5.ComputeHash(UTF8Encoding.UTF8.GetBytes(key));
-            TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();
-            tdes.Key = keyArray;
-            tdes.Mode = CipherMode.ECB;
-            tdes.Padding = PaddingMode.PKCS7;
+            TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider
+            {
+                Key = keyArray,
+                Mode = CipherMode.ECB,
+                Padding = PaddingMode.PKCS7
+            };
 
             ICryptoTransform cTransform = tdes.CreateDecryptor();
             byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
@@ -476,8 +476,8 @@ namespace WebApplication1.Controllers
         public async Task<ActionResult> Delete(string coordinator, string name, string token, string i)
         {
             client = new FireSharp.FirebaseClient(config);
-            var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            var sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+            ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+            string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
 
             await new FirebaseStorage(Bucket, new FirebaseStorageOptions
             {
@@ -485,8 +485,8 @@ namespace WebApplication1.Controllers
                 ThrowOnCancel = true
             }).Child("Student submit").Child(coordinator).Child(sid).Child(name).DeleteAsync();
 
-            var a = client.Get("Link/" + coordinator + "/" + sid);
-            var b = JsonConvert.DeserializeObject<List<string>>(a.Body);
+            FirebaseResponse a = client.Get("Link/" + coordinator + "/" + sid);
+            List<string> b = JsonConvert.DeserializeObject<List<string>>(a.Body);
 
             b.Remove(name);
 
@@ -494,7 +494,7 @@ namespace WebApplication1.Controllers
 
             if (b.Count == 0)
             {
-                var fi = JsonConvert.DeserializeObject<List<string>>(client.Get("Link/" + coordinator + "/student").Body);
+                List<string> fi = JsonConvert.DeserializeObject<List<string>>(client.Get("Link/" + coordinator + "/student").Body);
                 fi.Remove(sid);
                 await client.SetAsync("Link/" + coordinator + "/student", fi);
             }

@@ -1,64 +1,59 @@
 ﻿using Firebase.Storage;
 using FireSharp.Interfaces;
 using FireSharp.Response;
-using Ionic.Zip;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Net;
 using System.Security.Claims;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
-using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
     [Authorize(Roles = "Guest")]
     public class GuestController : Controller
     {
-        private static IFirebaseConfig config = new FireSharp.Config.FirebaseConfig
+        private static readonly IFirebaseConfig config = new FireSharp.Config.FirebaseConfig
         {
             AuthSecret = "8Qcxfs4Nx3SwBX9iLWXKtDRyQ2DHZCBATJD075aF",
             BasePath = "https://aspdata-8d746-default-rtdb.europe-west1.firebasedatabase.app/"
         };
         private static IFirebaseClient client;
-        private static string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
-        private static string Bucket = "aspdata-8d746.appspot.com";
+        private static readonly string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
+        private static readonly string Bucket = "aspdata-8d746.appspot.com";
         // GET: Guest
 
         public ActionResult Index()
         {
 
             client = new FireSharp.FirebaseClient(config);
-            var guest = client.Get("Guest/").Body;
-            var b = JsonConvert.DeserializeObject<Dictionary<string, string>>(guest);
-            var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            var sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+            string guest = client.Get("Guest/").Body;
+            Dictionary<string, string> b = JsonConvert.DeserializeObject<Dictionary<string, string>>(guest);
+            ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+            string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
 
 
-            var item = b.First(kvp => kvp.Value == sid);
+            KeyValuePair<string, string> item = b.First(kvp => kvp.Value == sid);
             ViewData["coordinator"] = item.Key;
-            var response = client.Get("Mark/" + item.Key);
-            var mark = JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Body);
+            FirebaseResponse response = client.Get("Mark/" + item.Key);
+            Dictionary<string, string> mark = JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Body);
 
-            var responseComment = client.Get("Comment/" + item.Key);
-            var Comment = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseComment.Body);
+            FirebaseResponse responseComment = client.Get("Comment/" + item.Key);
+            Dictionary<string, string> Comment = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseComment.Body);
 
-            var d = new Dictionary<string, List<string>>();
-            if(mark != null)
+            Dictionary<string, List<string>> d = new Dictionary<string, List<string>>();
+            if (mark != null)
             {
-                foreach (var a in mark)
+                foreach (KeyValuePair<string, string> a in mark)
                 {
                     if (a.Value == "Accept")
                     {
-                        var c = new List<string>();
-                        c.Add(JsonConvert.DeserializeObject<string>(client.Get("Account/Student/" + a.Key + "/Email").Body));
-                        c.Add(a.Value);
+                        List<string> c = new List<string>
+                        {
+                            JsonConvert.DeserializeObject<string>(client.Get("Account/Student/" + a.Key + "/Email").Body),
+                            a.Value
+                        };
                         if (Comment != null)
                         {
                             if (Comment.ContainsKey(a.Key))
@@ -72,7 +67,7 @@ namespace WebApplication1.Controllers
 
                 }
             }
-            
+
 
             return View(d);
 
@@ -222,8 +217,8 @@ namespace WebApplication1.Controllers
 
             client = new FireSharp.FirebaseClient(config);
             FirebaseResponse response = client.Get("Link/" + coordinator + "/" + Student);
-            var prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            var token = prinicpal.Claims.Where(c => c.Type == "Token").Select(c => c.Value).SingleOrDefault();
+            ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+            string token = prinicpal.Claims.Where(c => c.Type == "Token").Select(c => c.Value).SingleOrDefault();
 
             List<string> nameFile = new List<string>();
             List<string> link = new List<string>();
@@ -232,10 +227,10 @@ namespace WebApplication1.Controllers
 
                 List<string> a = JsonConvert.DeserializeObject<List<string>>(response.Body);
 
-                foreach (var item in a)
+                foreach (string item in a)
                 {
 
-                    var task = await new FirebaseStorage(Bucket, new FirebaseStorageOptions
+                    string task = await new FirebaseStorage(Bucket, new FirebaseStorageOptions
                     {
                         AuthTokenAsyncFactory = () => Task.FromResult(token),
                         ThrowOnCancel = true
