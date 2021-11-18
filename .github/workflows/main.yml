@@ -21,7 +21,7 @@ jobs:
       run: nuget restore WebApplication1.sln
  
     - name: Build and Publish Web App
-      run: msbuild WebApplication1.sln -t:rebuild -verbosity:diag -property:Configuration=Release  
+      run: msbuild WebApplication1.sln
  
     - name: Upload Artifact
       uses: actions/upload-artifact@v2.2.4
