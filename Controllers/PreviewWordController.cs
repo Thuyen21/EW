@@ -1,8 +1,4 @@
 ﻿using Microsoft.Office.Interop.Word;
-using Syncfusion.DocIO;
-using Syncfusion.DocIO.DLS;
-using Syncfusion.DocToPDFConverter;
-using Syncfusion.Pdf;
 using System;
 using System.IO;
 using System.Linq;
@@ -10,6 +6,11 @@ using System.Net;
 using System.Security.Claims;
 using System.Threading;
 using System.Web.Mvc;
+using Syncfusion.DocIO;
+using Syncfusion.DocIO.DLS;
+using Syncfusion.OfficeChart;
+using Syncfusion.DocToPDFConverter;
+using Syncfusion.Pdf;
 
 namespace WebApplication1.Controllers
 {
