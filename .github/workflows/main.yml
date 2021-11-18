@@ -23,9 +23,6 @@ jobs:
     - name: Build and Publish Web App
       run: msbuild WebApplication1.sln -t:rebuild -verbosity:diag -property:Configuration=Release
       
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v1
-      
     - name: Upload Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
