@@ -1,4 +1,4 @@
-name: Build Web App
+name: Build
  
 on: [push]
  
@@ -21,10 +21,4 @@ jobs:
       run: nuget restore WebApplication1.sln
  
     - name: Build and Publish Web App
-      run: msbuild WebApplication1.sln -t:rebuild -verbosity:diag -property:Configuration=Release
-      
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2.2.4
-      with:
-        name: published_webapp
-        path: bin\Release\Publish
+      run: msbuild WebApplication1.sln
