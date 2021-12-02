@@ -25,3 +25,5 @@ jobs:
 
       - name: Build and Publish Web App
         run: msbuild WebApplication1.sln /p:Configuration=Release
+      - uses: EndBug/add-and-commit@main # You can change this to use a specific version.
+        
