@@ -7,7 +7,8 @@ updates:
       interval: "daily"
     labels:
       - "nuget"
-
+    open-pull-requests-limit: 99
+    
   - package-ecosystem: "github-actions"
     # Files stored in `app` directory
     directory: "/"
