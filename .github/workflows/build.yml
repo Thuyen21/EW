@@ -11,11 +11,13 @@ jobs:
     runs-on: windows-2022
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.4.0
         name: Checkout Code
 
       - name: Setup MSBuild Path
-        uses: microsoft/setup-msbuild@v1.1
+        uses: microsoft/setup-msbuild@v1.1.1
+        with:
+          msbuild-architecture: x64
 
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v1.0.5
@@ -24,6 +26,24 @@ jobs:
         run: nuget restore WebApplication1.sln
 
       - name: Build and Publish Web App
-        run: msbuild WebApplication1.sln /p:Configuration=Release
-      - uses: EndBug/add-and-commit@v7.4.0 # You can change this to use a specific version.
+        run: msbuild WebApplication1.sln -t:rebuild -verbosity:diag -property:Configuration=Release
+        
+      - name: Commit files
+        if: steps.format.outputs.has-changes == 'true'
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -a -m 'Publish'
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@3.11.0
+        with:
+          title: "[housekeeping] Automated PR to fix formatting errors"
+          body: |
+            Automated PR to fix formatting errors
+          committer: GitHub <noreply@github.com>
+          author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+          labels: Publish
+          assignees: Thuyen21
+          reviewers: Thuyen21
+          branch: Publish
         
