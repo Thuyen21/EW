@@ -15,10 +15,10 @@ jobs:
         name: Checkout Code
 
       - name: Setup MSBuild Path
-        uses: microsoft/setup-msbuild@vmain
+        uses: microsoft/setup-msbuild@main
 
       - name: Setup NuGet
-        uses: NuGet/setup-nuget@vmain
+        uses: NuGet/setup-nuget@main
 
       - name: Restore NuGet Packages
         run: nuget restore WebApplication1.sln
