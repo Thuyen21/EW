@@ -6,11 +6,7 @@ using System.Net;
 using System.Security.Claims;
 using System.Threading;
 using System.Web.Mvc;
-using Syncfusion.DocIO;
-using Syncfusion.DocIO.DLS;
-using Syncfusion.OfficeChart;
-using Syncfusion.DocToPDFConverter;
-using Syncfusion.Pdf;
+using Syncfusion;
 
 namespace WebApplication1.Controllers
 {
