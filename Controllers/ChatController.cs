@@ -227,9 +227,9 @@ namespace WebApplication1.Controllers
             {
                 { con, mess }
             };
-            client.Set("Chat/" + sid + "/" + id + "/ " + con, mess);
+            _ = client.Set("Chat/" + sid + "/" + id + "/ " + con, mess);
 
-            return RedirectToAction("chat", new { id = id });
+            return RedirectToAction("chat", new { id });
         }
     }
 }

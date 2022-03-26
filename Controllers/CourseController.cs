@@ -85,10 +85,9 @@ namespace WebApplication1.Controllers
 
             client = new FireSharp.FirebaseClient(config);
             FirebaseResponse response = client.Get("Course/" + coordinator);
-
-            Course courses = new Course();
+            _ = new Course();
             Course data = JsonConvert.DeserializeObject<Course>(response.Body);
-            string json = string.Format("[{0}]", data);
+            _ = string.Format("[{0}]", data);
             client = new FireSharp.FirebaseClient(config);
             string[] roleList = { "Student" };
             List<SignUpModel> list = new List<SignUpModel>();
@@ -315,16 +314,16 @@ namespace WebApplication1.Controllers
                     exceptional = int.Parse(client.Get("Exceptional/" + sid + "/" + id).Body) + 1;
                 }
 
-                await client.SetAsync("Exceptional/" + sid + "/" + id, exceptional);
+                _ = await client.SetAsync("Exceptional/" + sid + "/" + id, exceptional);
             }
             else
             {
                 int exceptional = 1;
-                await client.SetAsync("Exceptional/" + sid + "/" + id, exceptional);
+                _ = await client.SetAsync("Exceptional/" + sid + "/" + id, exceptional);
             }
 
-            await client.UpdateAsync("Mark/" + sid, studentGrade);
-            await client.UpdateAsync("Comment/" + sid, studentComment);
+            _ = await client.UpdateAsync("Mark/" + sid, studentGrade);
+            _ = await client.UpdateAsync("Comment/" + sid, studentComment);
 
             return RedirectToAction("Mark", new { });
         }
