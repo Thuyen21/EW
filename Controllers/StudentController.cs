@@ -140,15 +140,7 @@ namespace WebApplication1.Controllers
             DateTime dateEnd = JsonConvert.DeserializeObject<Course>(response.Body).dateEnd;
             DateTime dateFinal = JsonConvert.DeserializeObject<Course>(response.Body).dateFinal;
             DateTime dateNow = DateTime.Now;
-            if (dateEnd > dateNow)
-            {
-                ViewData["canSubmit"] = true;
-            }
-            else
-            {
-                ViewData["canSubmit"] = false;
-
-            }
+            ViewData["canSubmit"] = dateEnd > dateNow ? true : (object)false;
             response = client.Get("Link/" + coordinator + "/student");
             List<string> student = JsonConvert.DeserializeObject<List<string>>(response.Body);
 
@@ -209,14 +201,14 @@ namespace WebApplication1.Controllers
                                     AuthTokenAsyncFactory = () => Task.FromResult(document.Token),
                                     ThrowOnCancel = true
                                 }).Child("Student submit").Child(coordinator).Child(sid).Child(name).DeleteAsync();
-                                names.Remove(name);
+                                _ = names.Remove(name);
                             }
                         }
                     }
 
                     names.Add(name);
-                    await client.SetAsync("Link/" + coordinator + "/" + sid, names);
-                    await new FirebaseStorage(Bucket, new FirebaseStorageOptions
+                    _ = await client.SetAsync("Link/" + coordinator + "/" + sid, names);
+                    _ = await new FirebaseStorage(Bucket, new FirebaseStorageOptions
                     {
                         AuthTokenAsyncFactory = () => Task.FromResult(document.Token),
                         ThrowOnCancel = true
@@ -239,14 +231,14 @@ namespace WebApplication1.Controllers
                             student.Add(item);
                             if (item == sid)
                             {
-                                student.Remove(sid);
+                                _ = student.Remove(sid);
                             }
                         }
                     }
 
                     student.Add(sid);
                     //System.Threading.Thread.Sleep(10000);
-                    await client.SetAsync("Link/" + coordinator + "/" + "/student", student);
+                    _ = await client.SetAsync("Link/" + coordinator + "/" + "/student", student);
 
                     string body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
                     MailMessage message = new MailMessage();
@@ -404,7 +396,7 @@ namespace WebApplication1.Controllers
 
 
 
-            return RedirectToAction("submit", "student", new { coordinator = coordinator });
+            return RedirectToAction("submit", "student", new { coordinator });
         }
         public async void up(FileStream stream, string fileName, string token, string coordinator)
         {
@@ -436,7 +428,7 @@ namespace WebApplication1.Controllers
                     }
                 }
             }
-            names.Remove(name);
+            _ = names.Remove(name);
             names.Add(name);
             SetResponse setResponse = client.Set("Link/" + coordinator + "/" + sid, names);
             FirebaseStorageTask task = new FirebaseStorage(Bucket, new FirebaseStorageOptions
@@ -488,18 +480,18 @@ namespace WebApplication1.Controllers
             FirebaseResponse a = client.Get("Link/" + coordinator + "/" + sid);
             List<string> b = JsonConvert.DeserializeObject<List<string>>(a.Body);
 
-            b.Remove(name);
+            _ = b.Remove(name);
 
-            await client.SetAsync("Link/" + coordinator + "/" + sid, b);
+            _ = await client.SetAsync("Link/" + coordinator + "/" + sid, b);
 
             if (b.Count == 0)
             {
                 List<string> fi = JsonConvert.DeserializeObject<List<string>>(client.Get("Link/" + coordinator + "/student").Body);
-                fi.Remove(sid);
-                await client.SetAsync("Link/" + coordinator + "/student", fi);
+                _ = fi.Remove(sid);
+                _ = await client.SetAsync("Link/" + coordinator + "/student", fi);
             }
 
-            return RedirectToAction("submit", "student", new { coordinator = coordinator });
+            return RedirectToAction("submit", "student", new { coordinator });
         }
         //public async void preview()
         //{

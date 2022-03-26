@@ -83,7 +83,7 @@ namespace WebApplication1.Controllers
                 {
                     FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
                     FirebaseAuthLink token = await auth.SignInWithEmailAndPasswordAsync(oldEmail, oldPassword);
-                    await auth.LinkAccountsAsync(token, signUpModel.Email, signUpModel.Password);
+                    _ = await auth.LinkAccountsAsync(token, signUpModel.Email, signUpModel.Password);
                 }
                 client = new FireSharp.FirebaseClient(config);
                 if (signUpModel.Email == null)
@@ -205,10 +205,9 @@ namespace WebApplication1.Controllers
 
             client = new FireSharp.FirebaseClient(config);
             FirebaseResponse response = client.Get("Course/" + coordinator);
-
-            Course courses = new Course();
+            _ = new Course();
             Course data = JsonConvert.DeserializeObject<Course>(response.Body);
-            string json = string.Format("[{0}]", data);
+            _ = string.Format("[{0}]", data);
             client = new FireSharp.FirebaseClient(config);
 
 
@@ -241,7 +240,7 @@ namespace WebApplication1.Controllers
                     collection.dateFinal = collection.dateEnd;
                 }
 
-                await client.SetAsync("Course/" + collection.Coordinator, collection);
+                _ = await client.SetAsync("Course/" + collection.Coordinator, collection);
 
 
                 FirebaseResponse markResponse1 = await client.GetAsync("Mark/" + collection.Coordinator);
@@ -266,7 +265,7 @@ namespace WebApplication1.Controllers
                     }
                     else
                     {
-                        client.Delete("Mark/" + collection.Coordinator);
+                        _ = client.Delete("Mark/" + collection.Coordinator);
                     }
                 }
                 else
@@ -281,7 +280,7 @@ namespace WebApplication1.Controllers
                     }
                     else
                     {
-                        client.Delete("Mark/" + collection.Coordinator);
+                        _ = client.Delete("Mark/" + collection.Coordinator);
                     }
 
                 }
@@ -420,10 +419,10 @@ namespace WebApplication1.Controllers
 
                 students.Add(model.id);
 
-                await client.SetAsync("Course/" + co + "/Student/", students);
+                _ = await client.SetAsync("Course/" + co + "/Student/", students);
 
-                await client.SetAsync("Mark/" + co + "/" + model.id, "Not Grade");
-                await client.SetAsync("Comment/" + co + "/" + model.id, " ");
+                _ = await client.SetAsync("Mark/" + co + "/" + model.id, "Not Grade");
+                _ = await client.SetAsync("Comment/" + co + "/" + model.id, " ");
                 return RedirectToAction("Index");
             }
 
@@ -492,7 +491,7 @@ namespace WebApplication1.Controllers
                 }
             }
 
-            List<Course> courses = new List<Course>();
+            _ = new List<Course>();
             foreach (SignUpModel id in list)
             {
 
@@ -531,7 +530,7 @@ namespace WebApplication1.Controllers
                     nameCourse = nameCourse
                 };
 
-                await client.SetAsync("Course/" + model.id, course);
+                _ = await client.SetAsync("Course/" + model.id, course);
                 ModelState.AddModelError(string.Empty, "Ok");
 
             }
@@ -637,7 +636,7 @@ namespace WebApplication1.Controllers
                     Dictionary<string, string> b = JsonConvert.DeserializeObject<Dictionary<string, string>>(guest);
                     b.Add(co, model.id);
 
-                    await client.SetAsync("Guest/", b);
+                    _ = await client.SetAsync("Guest/", b);
                 }
                 else
                 {
@@ -646,7 +645,7 @@ namespace WebApplication1.Controllers
                         { co, model.id }
                     };
 
-                    await client.SetAsync("Guest/", b);
+                    _ = await client.SetAsync("Guest/", b);
                 }
 
 
@@ -802,10 +801,10 @@ namespace WebApplication1.Controllers
                     return View(model);
 
                 }
-                await client.DeleteAsync("Course/" + a.User.LocalId);
-                await client.DeleteAsync("Comment/" + a.User.LocalId);
-                await client.DeleteAsync("Link/" + a.User.LocalId);
-                await client.DeleteAsync("Mark/" + a.User.LocalId);
+                _ = await client.DeleteAsync("Course/" + a.User.LocalId);
+                _ = await client.DeleteAsync("Comment/" + a.User.LocalId);
+                _ = await client.DeleteAsync("Link/" + a.User.LocalId);
+                _ = await client.DeleteAsync("Mark/" + a.User.LocalId);
 
             }
 
@@ -852,22 +851,22 @@ namespace WebApplication1.Controllers
                 {
                     List<string> b = JsonConvert.DeserializeObject<List<string>>(b1);
 
-                    b.Remove(a.User.LocalId);
-                    await client.SetAsync("Course/" + courses[0].Coordinator + "/Student", b);
+                    _ = b.Remove(a.User.LocalId);
+                    _ = await client.SetAsync("Course/" + courses[0].Coordinator + "/Student", b);
                 }
 
 
-                await client.DeleteAsync("Comment/" + courses[0].Coordinator + "/" + a.User.LocalId);
-                await client.DeleteAsync("Mark/" + courses[0].Coordinator + "/" + a.User.LocalId);
-                await client.DeleteAsync("Exceptional/" + courses[0].Coordinator + "/" + a.User.LocalId);
+                _ = await client.DeleteAsync("Comment/" + courses[0].Coordinator + "/" + a.User.LocalId);
+                _ = await client.DeleteAsync("Mark/" + courses[0].Coordinator + "/" + a.User.LocalId);
+                _ = await client.DeleteAsync("Exceptional/" + courses[0].Coordinator + "/" + a.User.LocalId);
 
                 string d = client.Get("Link/" + courses[0].Coordinator + "/student").Body;
                 if (d != "null")
                 {
                     List<string> c = JsonConvert.DeserializeObject<List<string>>(d);
 
-                    c.Remove(a.User.LocalId);
-                    await client.SetAsync("Link/" + courses[0].Coordinator + "/student", c);
+                    _ = c.Remove(a.User.LocalId);
+                    _ = await client.SetAsync("Link/" + courses[0].Coordinator + "/student", c);
                 }
 
             }
@@ -878,19 +877,12 @@ namespace WebApplication1.Controllers
 
                 KeyValuePair<string, string> item = b.First(kvp => kvp.Value == a.User.LocalId);
 
-                b.Remove(item.Key);
-                if (b.Count > 0)
-                {
-                    await client.SetAsync("Guest/", b);
-                }
-                else
-                {
-                    await client.DeleteAsync("Guest/");
-                }
+                _ = b.Remove(item.Key);
+                _ = b.Count > 0 ? await client.SetAsync("Guest/", b) : await client.DeleteAsync("Guest/");
             }
 
             await auth.DeleteUserAsync(a.FirebaseToken);
-            await client.DeleteAsync("Account/" + model.role + "/" + model.id);
+            _ = await client.DeleteAsync("Account/" + model.role + "/" + model.id);
             return RedirectToAction("Index");
         }
     }

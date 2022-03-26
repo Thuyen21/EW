@@ -279,7 +279,7 @@ namespace WebApplication1.Controllers
 
             if (!Directory.Exists(fileName))
             {
-                Directory.CreateDirectory(fileName);
+                _ = Directory.CreateDirectory(fileName);
             }
 
 
@@ -305,11 +305,11 @@ namespace WebApplication1.Controllers
             using (ZipFile zip = new ZipFile())
             {
                 zip.AlternateEncodingUsage = ZipOption.AsNecessary;
-                zip.AddDirectoryByName("Files");
+                _ = zip.AddDirectoryByName("Files");
                 foreach (FileModel file in files)
                 {
 
-                    zip.AddFile(file.FilePath, "Files");
+                    _ = zip.AddFile(file.FilePath, "Files");
 
                 }
                 string zipName = string.Format("Zip_{0}.zip", DateTime.Now.ToString("yyyy-MMM-dd-HHmmss"));
@@ -474,7 +474,7 @@ namespace WebApplication1.Controllers
                         else
                         {
                             c.Add(item1, sub.Count());
-                            e = e + sub.Count();
+                            e += sub.Count();
                         }
 
 
