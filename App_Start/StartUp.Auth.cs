@@ -10,7 +10,7 @@ namespace WebApplication1.App_Start
     {
         public void ConfigureAuth(IAppBuilder app)
         {
-            app.UseCookieAuthentication(new CookieAuthenticationOptions
+            _ = app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
                 LoginPath = new PathString("/Account/Login"),
