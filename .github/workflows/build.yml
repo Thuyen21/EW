@@ -48,7 +48,7 @@ jobs:
           path: dist
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: SamKirkland/FTP-Deploy-Action@master
         with:
           server: ${{ secrets.FTP }}
           username: ${{ secrets.USER }}
