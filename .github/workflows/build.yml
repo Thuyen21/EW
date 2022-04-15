@@ -26,7 +26,7 @@ jobs:
         run: nuget restore WebApplication1.sln
 
       - name: Build and Publish Web App
-        run: msbuild WebApplication1.sln /p:DeployOnBuild=true /p:PublishProfile="FolderProfile"
+        run: msbuild WebApplication1.sln -t:rebuild /p:DeployOnBuild=true /p:PublishProfile="FolderProfile"
 
       - name: Archive production artifact
         uses: actions/upload-artifact@main
