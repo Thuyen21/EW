@@ -29,8 +29,7 @@ jobs:
         run: msbuild WebApplication1.sln -nologo -t:rebuild -property:Configuration=Release -property:PublishUrl="../_build"
 
       - name: test
-        with:
-          path: "./_build"
+        working-directory: "./_build"
         run: |
           git config git-ftp.url "ftp://crt.somee.com/www.crt.somee.com"
           git config git-ftp.user ${{secrets.USER}}
