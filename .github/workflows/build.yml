@@ -29,10 +29,9 @@ jobs:
         run: msbuild WebApplication1.sln -t:rebuild /p:DeployOnBuild=true /p:PublishProfile="FolderProfile"
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        uses: genietim/ftp-action@releases/v4
         with:
-          server: ${{ secrets.FTP }}
-          username: ${{ secrets.USER }}
+          host: ${{ secrets.FTP }}
+          user: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }}
-          local-dir: "./publish/"
-          protocol: ftp
+          localDir: "./publish/"
