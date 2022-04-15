@@ -26,7 +26,7 @@ jobs:
         run: nuget restore WebApplication1.sln
 
       - name: Build and Publish Web App
-        run: msbuild WebApplication1.sln -nologo -t:rebuild -property:Configuration=Release -property:PublishUrl="./build"
+        run: msbuild WebApplication1.sln -nologo -t:publish -property:Configuration=Release -property:PublishUrl="./build"
 
       - name: test
         working-directory: "./build"
