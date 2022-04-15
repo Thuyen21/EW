@@ -35,4 +35,4 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }}
           local-dir: "./publish/"
-          protocol: ftps
+          protocol: ftp
