@@ -26,10 +26,10 @@ jobs:
         run: nuget restore WebApplication1.sln
 
       - name: Build and Publish Web App
-        run: msbuild WebApplication1.sln -nologo -t:rebuild -property:Configuration=Release -property:PublishUrl="../_build"
+        run: msbuild WebApplication1.sln -nologo -t:rebuild -property:Configuration=Release -property:PublishUrl="./build"
 
       - name: test
-        working-directory: "./_build"
+        working-directory: "./build"
         run: |
           git config git-ftp.url "ftp://crt.somee.com/www.crt.somee.com"
           git config git-ftp.user ${{secrets.USER}}
