@@ -50,7 +50,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@master
         with:
-          server: "${{ secrets.FTP }}"
-          username: "${{ secrets.USER }}"
+          host: "${{ secrets.FTP }}"
+          user: "${{ secrets.USER }}"
           password: "${{ secrets.PASSWORD }}"
-          local-dir: "./publish/"
+          src: "./publish/"
