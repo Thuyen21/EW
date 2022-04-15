@@ -26,4 +26,12 @@ jobs:
         run: nuget restore WebApplication1.sln
 
       - name: Build and Publish Web App
-        run: msbuild WebApplication1.sln -t:rebuild /p:DeployOnBuild=true /p:PublishProfile="FTPProfile.pubxml" /p:Password=${{secrets.PASSWORD}}
+        run: msbuild WebApplication1.sln -t:rebuild /p:DeployOnBuild=true /p:PublishProfile="FolderProfile"
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
+          local-dir: "./publish/"
