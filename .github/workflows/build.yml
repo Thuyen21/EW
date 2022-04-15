@@ -54,3 +54,4 @@ jobs:
           user: "${{ secrets.USER }}"
           password: "${{ secrets.PASSWORD }}"
           localDir: "publish"
+          options: "--delete --asci"
