@@ -34,8 +34,8 @@ jobs:
           name: publish
           path: publish
 
-  UpFTP:
-    if: github.event.push == true
+  UpSomee:
+    if: github.event_name = "push"
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -55,4 +55,4 @@ jobs:
           user: "${{ secrets.USER }}"
           password: "${{ secrets.PASSWORD }}"
           localDir: "publish"
-          options: "--delete"
+          # options: "--delete"
