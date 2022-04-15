@@ -48,9 +48,9 @@ jobs:
           path: publish
 
       - name: 📂 Sync files
+        working-directory: "./publish/"
         uses: sebastianpopp/ftp-action@releases/v2
         with:
           host: "${{ secrets.FTP }}"
           user: "${{ secrets.USER }}"
           password: "${{ secrets.PASSWORD }}"
-          local_dir: "./publish/"
