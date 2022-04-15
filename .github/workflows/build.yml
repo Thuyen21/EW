@@ -48,7 +48,7 @@ jobs:
           path: publish
 
       - name: 📂 Sync files
-        uses: anvil-solutions/Fast-FTP-Action@2.1.0
+        uses: sebastianpopp/ftp-action@releases/v2
         with:
           host: "${{ secrets.FTP }}"
           user: "${{ secrets.USER }}"
