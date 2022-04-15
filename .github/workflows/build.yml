@@ -40,10 +40,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         name: Checkout Code
-      - name: 📂 Sync files
-        uses: genietim/ftp-action@releases/v4
+
+      - name: Download artifact
+        uses: actions/download-artifact@main
         with:
-          host: ${{ secrets.FTP }}
-          user: ${{ secrets.USER }}
+          name: dist
+          path: dist
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.FTP }}
+          username: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }}
-          localDir: "./publish/"
+          local-dir: "./publish/"
