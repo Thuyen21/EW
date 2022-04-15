@@ -48,9 +48,10 @@ jobs:
           path: publish
 
       - name: 📂 Sync files
-        uses: sebastianpopp/ftp-action@releases/v2
+        uses: anvil-solutions/Fast-FTP-Action@2.1.0
         with:
           host: "${{ secrets.FTP }}"
           user: "${{ secrets.USER }}"
           password: "${{ secrets.PASSWORD }}"
-          localDir: "./publish/"
+          local_dir: "./publish/"
+          remote_dir: "d:/DZHosts/LocalUser/crt112233/www.crt.somee.com"
