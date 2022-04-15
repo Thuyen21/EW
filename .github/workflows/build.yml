@@ -35,6 +35,7 @@ jobs:
           path: publish
 
   UpFTP:
+    if: github.event.push == true
     needs: build
     runs-on: ubuntu-latest
     steps:
