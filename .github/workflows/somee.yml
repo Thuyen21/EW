@@ -1,0 +1,30 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  UpFTP:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout Code
+
+      - name: Download artifact
+        uses: actions/download-artifact@main
+        with:
+          name: publish
+          path: publish
+
+      - name: 📂 Sync files
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: "${{ secrets.FTP }}"
+          user: "${{ secrets.USER }}"
+          password: "${{ secrets.PASSWORD }}"
+          localDir: "publish"
+          options: "--delete"
