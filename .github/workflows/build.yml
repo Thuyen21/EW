@@ -31,8 +31,8 @@ jobs:
       - name: Archive production artifact
         uses: actions/upload-artifact@main
         with:
-          name: dist
-          path: dist
+          name: publish
+          path: publish
 
   UpFTP:
     needs: build
@@ -44,8 +44,8 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@main
         with:
-          name: dist
-          path: dist
+          name: publish
+          path: publish
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@master
