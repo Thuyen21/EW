@@ -54,4 +54,3 @@ jobs:
           user: "${{ secrets.USER }}"
           password: "${{ secrets.PASSWORD }}"
           local_dir: "./publish/"
-          remote_dir: "d:/DZHosts/LocalUser/crt112233/www.crt.somee.com"
