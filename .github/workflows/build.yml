@@ -28,6 +28,18 @@ jobs:
       - name: Build and Publish Web App
         run: msbuild WebApplication1.sln -t:rebuild /p:DeployOnBuild=true /p:PublishProfile="FolderProfile"
 
+      - name: Archive production artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: dist
+          path: dist
+
+  UpFTP:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout Code
       - name: 📂 Sync files
         uses: genietim/ftp-action@releases/v4
         with:
