@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: publish
-          path: publish
+          path: WebApplication1/publish
 
   UpSomee:
     if: github.event_name == 'push'
@@ -46,7 +46,7 @@ jobs:
         uses: actions/download-artifact@main
         with:
           name: publish
-          path: publish
+          path: WebApplication1/publish
 
       - name: 📂 Sync files
         uses: sebastianpopp/ftp-action@releases/v2
