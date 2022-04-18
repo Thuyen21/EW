@@ -54,5 +54,5 @@ jobs:
           host: "${{ secrets.FTP }}"
           user: "${{ secrets.USER }}"
           password: "${{ secrets.PASSWORD }}"
-          localDir: "publish"
+          localDir: "WebApplication1/publish"
           # options: "--delete"
