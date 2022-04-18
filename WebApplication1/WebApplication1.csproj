@@ -454,6 +454,13 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\chat.css" />
+    <Content Include="Content\flipcard.css" />
+    <Content Include="Content\login.css" />
+    <Content Include="Content\login2.css" />
+    <Content Include="Content\submit.css" />
+    <Content Include="Content\table.css" />
+    <Content Include="Content\thecard.css" />
     <Content Include="favicon.ico" />
     <Content Include="firebase-messaging-sw.js" />
     <Content Include="Global.asax" />
@@ -618,6 +625,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
