@@ -145,8 +145,6 @@ namespace WebApplication1.Controllers
 
 
             Dictionary<string, List<string>> con = new Dictionary<string, List<string>>();
-            int temp1 = 0;
-            int temp2 = 0;
             if (messForm != null && messTo == null)
             {
 

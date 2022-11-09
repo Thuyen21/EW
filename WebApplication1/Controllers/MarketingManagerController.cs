@@ -343,7 +343,7 @@ namespace WebApplication1.Controllers
 
 
         }
-        public async Task<ActionResult> Exceptional(string coordinator)
+        public ActionResult Exceptional(string coordinator)
         {
             if (coordinator == null)
             {
@@ -407,7 +407,7 @@ namespace WebApplication1.Controllers
 
             return View(matches);
         }
-        public async Task<ActionResult> Contributions(string coordinator)
+        public ActionResult Contributions(string coordinator)
         {
             if (coordinator == null)
             {

@@ -69,7 +69,7 @@ namespace WebApplication1.Controllers
 
         [AllowAnonymous]
         [HttpGet]
-        public async Task<ActionResult> Login(string returnUrl)
+        public ActionResult Login(string returnUrl)
         {
             try
             {

@@ -14,25 +14,21 @@ jobs:
       - uses: actions/checkout@v3
         name: Checkout Code
 
-      - name: Setup MSBuild Path
-        uses: microsoft/setup-msbuild@v1.1
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
         with:
-          msbuild-architecture: x64
+          dotnet-version: "7.x"
+          dotnet-quality: "preview"
 
-      - name: Setup NuGet
-        uses: NuGet/setup-nuget@v1.0.6
-
-      - name: Restore NuGet Packages
-        run: nuget restore WebApplication1.sln
-
-      - name: Build and Publish Web App
-        run: msbuild WebApplication1.sln -t:rebuild /p:DeployOnBuild=true /p:PublishProfile="FolderProfile"
+      - name: Publish
+        working-directory: "./WebApplication1Core/"
+        run: dotnet publish WebApplication1Core.csproj
 
       - name: Archive production artifact
         uses: actions/upload-artifact@main
         with:
           name: publish
-          path: WebApplication1/publish
+          path: "./WebApplication1Core/bin/Debug/net7.0/publish/"
 
   UpSomee:
     if: github.event_name == 'push'

@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Course>
+
+@{
+    ViewBag.Title = "Marketing Manager Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="margin-top: 30px; margin-bottom: 20px">Marketing Manager Index</h2>
+
+@{ var mail = ViewData["mail"] as Dictionary<string, string>;}
+<table class="table" style="margin-top: 50px; margin-bottom:50px">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @*@Html.DisplayNameFor(model => model.nameCourse)*@
+                Course Name
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Coordinator)*@
+                Coordinator
+            </th>
+            <th>
+                Coordinator mail
+            </th>
+
+
+            <th>
+                @*@Html.DisplayNameFor(model => model.dateEnd)*@
+                Date End
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.dateEnd)*@
+                Date Final
+            </th>
+            <th>
+                View Mark
+            </th>
+            <th>
+                Exceptional
+            </th>
+            <th>
+                Contributions
+            </th>
+        </tr>
+    </thead>
+
+    
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.nameCourse)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Coordinator)
+    </td>
+    <td>
+        @mail[item.Coordinator]
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.dateEnd)
+    </td><td>
+    @Html.DisplayFor(modelItem => item.dateFinal)
+</td>
+
+    <td>
+
+        @*<button class="btn btn-outline-primary btn-md" style="border-radius: 10px"></button>*@
+        @Html.ActionLink("View", "viewMark", new { coordinator = item.Coordinator }, new {@class = "btn btn-primary" })
+    </td>
+    <td>
+        @Html.ActionLink("View", "Exceptional", new { coordinator = item.Coordinator }, new { @class = "btn btn-primary" })
+        
+    </td>
+    <td>
+        @Html.ActionLink("View", "Contributions", new { coordinator = item.Coordinator }, new { @class = "btn btn-primary" })
+    </td>
+</tr>
+}
+
+</table>

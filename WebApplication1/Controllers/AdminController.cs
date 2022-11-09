@@ -433,7 +433,7 @@ namespace WebApplication1.Controllers
 
             return View();
         }
-        public async Task<ActionResult> CreateAdmin()
+        public ActionResult CreateAdmin()
         {
 
             return View();
@@ -466,7 +466,7 @@ namespace WebApplication1.Controllers
 
         }
 
-        public async Task<ActionResult> CreateMarketingCoordinator()
+        public ActionResult CreateMarketingCoordinator()
         {
             return View();
         }
@@ -543,7 +543,7 @@ namespace WebApplication1.Controllers
 
             return View();
         }
-        public async Task<ActionResult> CreateMarketingManager()
+        public ActionResult CreateMarketingManager()
         {
             return View();
         }
@@ -574,7 +574,7 @@ namespace WebApplication1.Controllers
 
             return View();
         }
-        public async Task<ActionResult> CreateGuest()
+        public ActionResult CreateGuest()
         {
             client = new FireSharp.FirebaseClient(config);
 
@@ -733,7 +733,6 @@ namespace WebApplication1.Controllers
                 return RedirectToAction("index");
             }
             client = new FireSharp.FirebaseClient(config);
-            string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
             string Bucket = "aspdata-8d746.appspot.com";
 
             client = new FireSharp.FirebaseClient(config);

@@ -1,0 +1,35 @@
+﻿@model Dictionary<string,string>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<table class="table" style="margin-top: 50px; margin-bottom:50px">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                Email
+            </th>
+            <th>
+                Chat
+            </th>
+        </tr>
+    </thead>
+    
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @item.Value
+            </td>
+            <td>
+                <button class="btn btn-danger btn-md" style="border-radius:10px">@Html.ActionLink("Chat", "Chat", new { id = item.Key }, new { @class = "btn btn-danger btn-md" })</button>
+                
+            </td>
+            
+        </tr>
+    }
+    </table>
+
