@@ -5,22 +5,22 @@ namespace WebApplication1.Models
     {
 
         [Key]
-        public string? id { get; set; }
+        public string id { get; set; }
         [Required]
 
-        public string? Name { get; set; }
+        public string Name { get; set; }
 
         [Required]
         [DataType(DataType.EmailAddress)]
 
-        public string? Email { get; set; }
+        public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
 
-        public string? Password { get; set; }
+        public string Password { get; set; }
         [Required]
-        public string? role { get; set; }
+        public string role { get; set; }
         [Required]
 
         public bool enable { get; set; }

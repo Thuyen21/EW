@@ -2,11 +2,15 @@
 using Firebase.Storage;
 using FireSharp.Interfaces;
 using FireSharp.Response;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Web.Mvc;
 using WebApplication1.Models;
 using FirebaseConfig = Firebase.Auth.FirebaseConfig;
 
@@ -22,7 +26,7 @@ namespace WebApplication1.Controllers
             AuthSecret = "8Qcxfs4Nx3SwBX9iLWXKtDRyQ2DHZCBATJD075aF",
             BasePath = "https://aspdata-8d746-default-rtdb.europe-west1.firebasedatabase.app/"
         };
-        private static IFirebaseClient? client;
+        private static IFirebaseClient client;
         private static readonly string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
         private static readonly string Bucket = "aspdata-8d746.appspot.com";
 
@@ -33,7 +37,7 @@ namespace WebApplication1.Controllers
         {
             client = new FireSharp.FirebaseClient(config);
             string[] roleList = { "Admin", "Marketing Coordinator", "Marketing Manager", "Guest", "Student" };
-            List<SignUpModel> list = new();
+            List<SignUpModel> list = new List<SignUpModel>();
             foreach (string role in roleList)
             {
                 FirebaseResponse response = client.Get("Account/" + role);
@@ -77,7 +81,7 @@ namespace WebApplication1.Controllers
             {
                 if (signUpModel.Email != oldEmail || signUpModel.Password != oldPassword)
                 {
-                    FirebaseAuthProvider auth = new(new FirebaseConfig(ApiKey));
+                    FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
                     FirebaseAuthLink token = await auth.SignInWithEmailAndPasswordAsync(oldEmail, oldPassword);
                     _ = await auth.LinkAccountsAsync(token, signUpModel.Email, signUpModel.Password);
                 }
@@ -121,8 +125,8 @@ namespace WebApplication1.Controllers
         {
             client = new FireSharp.FirebaseClient(config);
 
-            List<string> students = new();
-            List<string> mags = new();
+            List<string> students = new List<string>();
+            List<string> mags = new List<string>();
 
             FirebaseResponse response = client.Get("Student/");
 
@@ -169,7 +173,7 @@ namespace WebApplication1.Controllers
 
 
 
-                Dictionary<string, string> studentGrade = new();
+                Dictionary<string, string> studentGrade = new Dictionary<string, string>();
                 if (collection.Student != null)
                 {
                     foreach (string a in collection.Student)
@@ -241,7 +245,7 @@ namespace WebApplication1.Controllers
 
                 FirebaseResponse markResponse1 = await client.GetAsync("Mark/" + collection.Coordinator);
                 Dictionary<string, string> mark1 = JsonConvert.DeserializeObject<Dictionary<string, string>>(markResponse1.Body);
-                Dictionary<string, string> markNew1 = new();
+                Dictionary<string, string> markNew1 = new Dictionary<string, string>();
                 if (markResponse1.Body != "null")
                 {
                     if (collection.Student != null)
@@ -296,7 +300,7 @@ namespace WebApplication1.Controllers
         {
             client = new FireSharp.FirebaseClient(config);
             string[] roleList = { "Marketing Coordinator" };
-            List<SignUpModel> list = new();
+            List<SignUpModel> list = new List<SignUpModel>();
             foreach (string role in roleList)
             {
                 FirebaseResponse response = client.Get("Account/" + role);
@@ -309,8 +313,8 @@ namespace WebApplication1.Controllers
                     }
                 }
             }
-            List<Course> editorials = new();
-            Dictionary<string, string> mail = new();
+            List<Course> editorials = new List<Course>();
+            Dictionary<string, string> mail = new Dictionary<string, string>();
             foreach (SignUpModel id in list)
             {
                 FirebaseResponse response = client.Get("Course/" + id.id);
@@ -369,7 +373,7 @@ namespace WebApplication1.Controllers
 
             FirebaseResponse response = client.Get("Account/Marketing Coordinator/");
 
-            List<SignUpModel> co = new();
+            List<SignUpModel> co = new List<SignUpModel>();
             dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
             if (data != null)
             {
@@ -389,7 +393,7 @@ namespace WebApplication1.Controllers
             try
             {
                 model.role = "Student";
-                FirebaseAuthProvider auth = new(new FirebaseConfig(ApiKey));
+                FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
 
                 FirebaseAuthLink a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
 
@@ -402,7 +406,7 @@ namespace WebApplication1.Controllers
 
                 string student = client.Get("Course/" + co + "/Student").Body;
 
-                List<string> students = new();
+                List<string> students = new List<string>();
                 if (student != "null")
                 {
                     List<string> add = JsonConvert.DeserializeObject<List<string>>(student);
@@ -438,7 +442,7 @@ namespace WebApplication1.Controllers
         public async Task<ActionResult> CreateAdmin(SignUpModel model)
         {
             model.role = "Admin";
-            FirebaseAuthProvider auth = new(new FirebaseConfig(ApiKey));
+            FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
 
             try
             {
@@ -473,7 +477,7 @@ namespace WebApplication1.Controllers
             client = new FireSharp.FirebaseClient(config);
 
             string[] roleList = { "Marketing Coordinator" };
-            List<SignUpModel> list = new();
+            List<SignUpModel> list = new List<SignUpModel>();
             foreach (string role in roleList)
             {
                 FirebaseResponse response = client.Get("Account/" + role);
@@ -509,7 +513,7 @@ namespace WebApplication1.Controllers
             try
             {
                 model.role = "Marketing Coordinator";
-                FirebaseAuthProvider auth = new(new FirebaseConfig(ApiKey));
+                FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
 
                 FirebaseAuthLink a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
 
@@ -518,7 +522,7 @@ namespace WebApplication1.Controllers
                 model.id = a.User.LocalId;
                 SetResponse setResponse = client.Set("Account/" + model.role + "/" + model.id, model);
 
-                Course course = new()
+                Course course = new Course
                 {
                     Coordinator = model.id,
                     dateEnd = DateTime.Parse("1/1/0001 12:00:00 AM"),
@@ -549,7 +553,7 @@ namespace WebApplication1.Controllers
             try
             {
                 model.role = "Marketing Manager";
-                FirebaseAuthProvider auth = new(new FirebaseConfig(ApiKey));
+                FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
 
                 FirebaseAuthLink a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
 
@@ -576,7 +580,7 @@ namespace WebApplication1.Controllers
 
             FirebaseResponse response = client.Get("Account/Marketing Coordinator/");
 
-            List<SignUpModel> co = new();
+            List<SignUpModel> co = new List<SignUpModel>();
             dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
 
             response = client.Get("Guest/");
@@ -616,7 +620,7 @@ namespace WebApplication1.Controllers
             try
             {
                 model.role = "Guest";
-                FirebaseAuthProvider auth = new(new FirebaseConfig(ApiKey));
+                FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
 
                 FirebaseAuthLink a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
 
@@ -636,7 +640,7 @@ namespace WebApplication1.Controllers
                 }
                 else
                 {
-                    Dictionary<string, string> b = new()
+                    Dictionary<string, string> b = new Dictionary<string, string>
                     {
                         { co, model.id }
                     };
@@ -692,14 +696,14 @@ namespace WebApplication1.Controllers
             FirebaseResponse responseComment = client.Get("Comment/" + coordinator);
             Dictionary<string, string> Comment = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseComment.Body);
 
-            Dictionary<string, List<string>> b = new();
-            Dictionary<string, string> mail = new();
+            Dictionary<string, List<string>> b = new Dictionary<string, List<string>>();
+            Dictionary<string, string> mail = new Dictionary<string, string>();
             if (mark != null)
             {
                 foreach (KeyValuePair<string, string> a in mark)
                 {
                     mail.Add(a.Key, JsonConvert.DeserializeObject<string>(client.Get("Account/Student/" + a.Key + "/Email").Body));
-                    List<string> c = new()
+                    List<string> c = new List<string>
                     {
                         a.Value
                     };
@@ -736,8 +740,8 @@ namespace WebApplication1.Controllers
             ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
             string token = prinicpal.Claims.Where(c => c.Type == "Token").Select(c => c.Value).SingleOrDefault();
 
-            List<string> nameFile = new();
-            List<string> link = new();
+            List<string> nameFile = new List<string>();
+            List<string> link = new List<string>();
             if (response.Body != "null")
             {
 
@@ -782,7 +786,7 @@ namespace WebApplication1.Controllers
         public async System.Threading.Tasks.Task<ActionResult> Delete(SignUpModel model)
         {
             client = new FireSharp.FirebaseClient(config);
-            FirebaseAuthProvider auth = new(new FirebaseConfig(ApiKey));
+            FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
 
             FirebaseAuthLink a = await auth.SignInWithEmailAndPasswordAsync(model.Email, model.Password);
 
@@ -806,7 +810,7 @@ namespace WebApplication1.Controllers
             else if (model.role == "Student")
             {
                 string[] roleList = { "Marketing Coordinator" };
-                List<SignUpModel> list = new();
+                List<SignUpModel> list = new List<SignUpModel>();
                 foreach (string role in roleList)
                 {
                     FirebaseResponse response = client.Get("Account/" + role);
@@ -820,7 +824,7 @@ namespace WebApplication1.Controllers
                     }
                 }
 
-                List<Course> courses = new();
+                List<Course> courses = new List<Course>();
                 foreach (SignUpModel id in list)
                 {
 

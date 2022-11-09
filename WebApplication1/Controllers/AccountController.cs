@@ -1,12 +1,19 @@
 ﻿using Firebase.Auth;
 using FireSharp.Interfaces;
 using FireSharp.Response;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.Security.Claims;
+using System.Threading.Tasks;
+using System.Web;
+using System.Web.Mvc;
 using WebApplication1.Models;
+
+
+
 
 namespace WebApplication1.Controllers
 {
@@ -19,7 +26,7 @@ namespace WebApplication1.Controllers
             BasePath = "https://aspdata-8d746-default-rtdb.europe-west1.firebasedatabase.app/"
         };
 
-        private static IFirebaseClient? client;
+        private static IFirebaseClient client;
 
 
         private static readonly string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
@@ -38,7 +45,7 @@ namespace WebApplication1.Controllers
         {
             try
             {
-                FirebaseAuthProvider auth = new(new FirebaseConfig(ApiKey));
+                FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
 
                 FirebaseAuthLink a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
 
@@ -82,6 +89,14 @@ namespace WebApplication1.Controllers
                 //model.enable = true;
                 //model.Name = "Admin";
                 //SetResponse setResponse = client.Set("Account/" + model.role + "/" + model.id, model);
+
+                if (Request.IsAuthenticated)
+                {
+
+
+
+                    //  return this.RedirectToLocal(returnUrl);
+                }
             }
             catch (Exception ex)
             {
@@ -103,7 +118,7 @@ namespace WebApplication1.Controllers
 
                 if (ModelState.IsValid)
                 {
-                    FirebaseAuthProvider auth = new(new FirebaseConfig(ApiKey));
+                    FirebaseAuthProvider auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
                     FirebaseAuthLink ab = await auth.SignInWithEmailAndPasswordAsync(model.Email, model.Password);
                     string token = ab.FirebaseToken;
 
@@ -119,7 +134,7 @@ namespace WebApplication1.Controllers
                         ModelState.AddModelError("error", "Invalid username or password.");
                         return View(model);
                     }
-                    List<Claim> claims = new();
+                    List<Claim> claims = new List<Claim>();
                     client = new FireSharp.FirebaseClient(config);
 
 
@@ -162,17 +177,24 @@ namespace WebApplication1.Controllers
                         claims.Add(new Claim("Role", data.role));
 
 
-                        ClaimsIdentity claimIdenties = new(claims);
+                        ClaimsIdentity claimIdenties = new ClaimsIdentity(claims, DefaultAuthenticationTypes.ApplicationCookie);
 
-                        ClaimsPrincipal claimsPrincipal = new(claimIdenties);
+                        Microsoft.Owin.IOwinContext ctx = Request.GetOwinContext();
+                        IAuthenticationManager authenticationManager = ctx.Authentication;
 
-                        _ = HttpContext.SignInAsync(claimsPrincipal);
+
+                        authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = true }, claimIdenties);
+
+                        ClaimsIdentity identity = HttpContext.User.Identity as ClaimsIdentity;
+
+                        // Gets list of claims.
+
 
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
 
-                        throw;
+                        throw ex;
                     }
                     User a = await auth.GetUserAsync(token);
 
@@ -203,6 +225,24 @@ namespace WebApplication1.Controllers
 
         }
 
+        private void ClaimIdentities(string username, bool isPersistent)
+        {
+
+            List<Claim> claims = new List<Claim>();
+            try
+            {
+
+                claims.Add(new Claim(ClaimTypes.Name, username));
+                ClaimsIdentity claimIdenties = new ClaimsIdentity(claims, DefaultAuthenticationTypes.ApplicationCookie);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         private ActionResult RedirectToLocal(string returnUrl)
         {
             try
@@ -214,10 +254,10 @@ namespace WebApplication1.Controllers
                     return Redirect(returnUrl);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
 
 
@@ -228,7 +268,9 @@ namespace WebApplication1.Controllers
         [HttpGet]
         public ActionResult LogOff()
         {
-            HttpContext.SignOutAsync().Wait();
+            Microsoft.Owin.IOwinContext ctx = Request.GetOwinContext();
+            IAuthenticationManager authenticationManager = ctx.Authentication;
+            authenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             return RedirectToAction("Login", "Account");
 
         }

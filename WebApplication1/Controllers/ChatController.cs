@@ -1,10 +1,13 @@
 ﻿using FireSharp.Interfaces;
 using FireSharp.Response;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
+using System.Threading;
+using System.Web.Mvc;
 using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
@@ -18,7 +21,7 @@ namespace WebApplication1.Controllers
             AuthSecret = "8Qcxfs4Nx3SwBX9iLWXKtDRyQ2DHZCBATJD075aF",
             BasePath = "https://aspdata-8d746-default-rtdb.europe-west1.firebasedatabase.app/"
         };
-        private static IFirebaseClient? client;
+        private static IFirebaseClient client;
         private static readonly string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
         private static readonly string Bucket = "aspdata-8d746.appspot.com";
         // GET: Chat
@@ -28,7 +31,7 @@ namespace WebApplication1.Controllers
             string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
             string roleNow = prinicpal.Claims.Where(c => c.Type == "Role").Select(c => c.Value).SingleOrDefault();
             client = new FireSharp.FirebaseClient(config);
-            Dictionary<string, string> chat = new();
+            Dictionary<string, string> chat = new Dictionary<string, string>();
             string[] roleList = new string[1];
             if (roleNow == "Marketing Coordinator")
             {
@@ -54,7 +57,7 @@ namespace WebApplication1.Controllers
             else if (roleNow == "Student")
             {
                 roleList = new string[] { "Marketing Coordinator" };
-                List<SignUpModel> list = new();
+                List<SignUpModel> list = new List<SignUpModel>();
                 foreach (string role in roleList)
                 {
                     FirebaseResponse response = client.Get("Account/" + role);
@@ -118,7 +121,7 @@ namespace WebApplication1.Controllers
 
             Dictionary<string, string> messToBe = JsonConvert.DeserializeObject<Dictionary<string, string>>(client.Get("Chat/" + sid + "/" + id).Body);
 
-            Dictionary<string, string> messTo = new();
+            Dictionary<string, string> messTo = new Dictionary<string, string>();
             if (messToBe != null)
             {
                 foreach (KeyValuePair<string, string> item in messToBe)
@@ -128,7 +131,7 @@ namespace WebApplication1.Controllers
                 }
             }
             Dictionary<string, string> messFormBe = JsonConvert.DeserializeObject<Dictionary<string, string>>(client.Get("Chat/" + id + "/" + sid).Body);
-            Dictionary<string, string> messForm = new();
+            Dictionary<string, string> messForm = new Dictionary<string, string>();
             if (messFormBe != null)
             {
                 foreach (KeyValuePair<string, string> item in messFormBe)
@@ -141,13 +144,13 @@ namespace WebApplication1.Controllers
 
 
 
-            Dictionary<string, List<string>> con = new();
+            Dictionary<string, List<string>> con = new Dictionary<string, List<string>>();
             if (messForm != null && messTo == null)
             {
 
                 for (int i = 0; i < messForm.Count(); i++)
                 {
-                    List<string> a = new()
+                    List<string> a = new List<string>
                     {
                         "I",
                         messForm[i.ToString()]
@@ -161,7 +164,7 @@ namespace WebApplication1.Controllers
             {
                 for (int i = 0; i < messTo.Count(); i++)
                 {
-                    List<string> a = new()
+                    List<string> a = new List<string>
                     {
                         "U",
                         messTo[i.ToString()]
@@ -175,7 +178,7 @@ namespace WebApplication1.Controllers
             {
                 for (int i = 0; i < messTo.Count() + messForm.Count(); i++)
                 {
-                    List<string> a = new();
+                    List<string> a = new List<string>();
 
                     if (messForm.ContainsKey(i.ToString()))
                     {
@@ -208,14 +211,17 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult Chat(string id, string mess, string con)
         {
-            con ??= "0";
+            if (con == null)
+            {
+                con = "0";
+            }
 
             ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
             string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
             string roleNow = prinicpal.Claims.Where(c => c.Type == "Role").Select(c => c.Value).SingleOrDefault();
 
             client = new FireSharp.FirebaseClient(config);
-            Dictionary<string, string> sent = new()
+            Dictionary<string, string> sent = new Dictionary<string, string>
             {
                 { con, mess }
             };

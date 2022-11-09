@@ -31,7 +31,6 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 builder.Services.AddRazorPages();
 
-
 WebApplication app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
@@ -43,8 +42,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseAuthorization();
 app.UseAuthentication();
+app.UseAuthorization();
 app.UseSystemWebAdapters();
 
 app.MapDefaultControllerRoute();

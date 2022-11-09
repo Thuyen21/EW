@@ -3,9 +3,9 @@
     public class Faculty
     {
 
-        public SignUpModel? marketingCoordinatorId { get; set; }
+        public SignUpModel marketingCoordinatorId { get; set; }
 
-        public SignUpModel[]? Student { get; set; }
+        public SignUpModel[] Student { get; set; }
 
     }
 }

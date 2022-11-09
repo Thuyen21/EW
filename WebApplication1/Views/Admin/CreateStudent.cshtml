@@ -1,5 +1,5 @@
-﻿@using WebApplication1.Models;
-@model WebApplication1.Models.SignUpModel
+﻿@model WebApplication1.Models.SignUpModel
+@using WebApplication1.Models
 @{
     ViewBag.Title = "Create Student";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -210,3 +210,6 @@
     @Html.ActionLink("< Back to List", "Index", null, new { @class = "btn btn-primary", style = " border-radius:10px" })
 </div>
 
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

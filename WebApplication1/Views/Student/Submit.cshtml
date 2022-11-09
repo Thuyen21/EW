@@ -1,4 +1,6 @@
-﻿@using System.Security.Claims;
+﻿@model WebApplication1.Models.Submissions
+@using Microsoft.AspNet.Identity
+@using System.Security.Claims;
 @{
     ViewBag.Title = "Submit File";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -33,7 +35,7 @@
         <a href="@viewDataLink[i]">@viewDataNameFile[i]</a> <br />
         if ((bool)ViewData["canSubmit"] == true)
         {
-            @Html.ActionLink("Delete", "Delete", new { coordinator = @ViewData["coordinator"], name = @viewDataNameFile[i], i = @i, token = (User.FindFirstValue("Token")) })<br />
+            @Html.ActionLink("Delete", "Delete", new { coordinator = @ViewData["coordinator"], name = @viewDataNameFile[i], i = @i, token = (((ClaimsIdentity)User.Identity).FindFirstValue("Token")) })<br />
         }
     }
 
@@ -68,7 +70,7 @@
 
                 <div class="col-md-10">
                     <input type="file" name="file" id="file" class="form-control" accept="image/*,application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document" required />
-                    <input type="hidden" id="Token" name="Token" value=@(User.FindFirstValue("Token"))>
+                    <input type="hidden" id="Token" name="Token" value=@(((ClaimsIdentity)User.Identity).FindFirstValue("Token"))>
                     Agree to Terms and Conditions
                     <input type="checkbox" name="agree" id="agree" required />
                 </div>
