@@ -1,88 +1,97 @@
-﻿@using Microsoft.AspNet.Identity
-
-@using System.Security.Claims;
-
-@if (Request.IsAuthenticated)
+﻿@if (User.Identity.IsAuthenticated)
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
     {
-        
+
         @Html.AntiForgeryToken()
-<ul class="nav navbar-nav">
+        <ul class="nav navbar-nav">
 
 
 
 
 
-    @switch ((((ClaimsIdentity)User.Identity).FindFirstValue("Role")))
-    {
-        case "Admin":
-            
+
+            @if (User.IsInRole("Admin"))
+            {
+                <li class="nav-item">
+
+                    @("Hello " + User.Identity.Name)
+                    @*<button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Hello " + (((ClaimsIdentity)User.Identity).FindFirstValue("Name")), "Index", "Admin", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>*@
+                    <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Admin Index", "Index", "Admin", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>
+
+
+                </li>
+                <li>
+                    <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Course Index", "IndexCourse", "Admin", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>
+
+                </li>
+
+            }
+            else if (User.IsInRole("Student"))
+            {
+
+
+
+                <li class="nav-item">
+                    @("Hello " + (User.Identity.Name))
+                    <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Student Index", "Index", "Student", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>
+
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Chat", "Index", "Chat", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>
+
+                </li>
+
+            }
+            else if (User.IsInRole("Marketing Coordinator"))
+            {
+
+
+                <li class="nav-item">
+                    @("Hello " + User.Identity.Name)
+                    <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Coordinator Index", "Index", "Course", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>
+
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Chat", "Index", "Chat", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>
+
+                </li>
+            }
+            else if (User.IsInRole("Marketing Manager"))
+            {
+                <li class="nav-item">
+                    @("Hello " + User.Identity.Name)
+                    <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Manager Index", "Index", "MarketingManager", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>
+
+                </li>
+
+            }
+            else if (User.IsInRole("Guest"))
+            {
+
+
+                <li class="nav-item">
+                    @("Hello " + User.Identity.Name)
+                    <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Guest Index", "Index", "Guest", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>
+
+                </li>
+            }
+
+            }
             <li class="nav-item">
-
-                @("Hello " + (((ClaimsIdentity)User.Identity).FindFirstValue("Name")))
-                @*<button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Hello " + (((ClaimsIdentity)User.Identity).FindFirstValue("Name")), "Index", "Admin", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>*@
-                <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Admin Index", "Index", "Admin", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>
-                
+                <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Log out", "Logoff", "Account", routeValues: null, htmlAttributes: new { id = "logoutLink", @class = "nav-link" })</button>
 
             </li>
-            <li>
-                <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Course Index", "IndexCourse", "Admin", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>
-
-            </li>
-            break;
-        case "Student":
-            <li class="nav-item">
-                @("Hello " + (((ClaimsIdentity)User.Identity).FindFirstValue("Name")))
-                <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Student Index", "Index", "Student", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>
-
-            </li>
-            <li class="nav-item">
-                <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Chat", "Index", "Chat", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>
-
-            </li>
-
-            break;
-        case "Marketing Coordinator":
-            <li class="nav-item">
-                @("Hello " + (((ClaimsIdentity)User.Identity).FindFirstValue("Name")))
-                <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Coordinator Index", "Index", "Course", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>
-
-            </li>
-            <li class="nav-item">
-                <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Chat", "Index", "Chat", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>
-
-            </li>
-            break;
-        case "Marketing Manager":
-            <li class="nav-item">
-                @("Hello " + (((ClaimsIdentity)User.Identity).FindFirstValue("Name")))
-                <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Manager Index", "Index", "MarketingManager", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>
-
-            </li>
-            break;
-        case "Guest":
-            <li class="nav-item">
-                @("Hello " + (((ClaimsIdentity)User.Identity).FindFirstValue("Name")))
-                <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Guest Index", "Index", "Guest", routeValues: null, htmlAttributes: new { @class = "nav-link" })</button>
-
-            </li>
-            break;
-        default:
-            break;
+        </ul>
     }
-    <li class="nav-item">
-        <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Log out", "Logoff", "Account", routeValues: null, htmlAttributes: new { id = "logoutLink", @class = "nav-link" })</button>
-
-    </li>
-</ul> }
 }
 else
 {
     <ul class="nav navbar-nav">
 
         <li class="nav-item">
-            
+
             <button type="button" class="btn btn-outline-light navbar-btn justify-content-end btn-secondary" style="border-radius:10px">@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "nav-link" })</button>
         </li>
-    </ul>}
+    </ul>
+}

@@ -1,21 +1,15 @@
 ﻿using Firebase.Storage;
 using FireSharp.Interfaces;
 using FireSharp.Response;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Mvc;
 using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
@@ -28,7 +22,7 @@ namespace WebApplication1.Controllers
             AuthSecret = "8Qcxfs4Nx3SwBX9iLWXKtDRyQ2DHZCBATJD075aF",
             BasePath = "https://aspdata-8d746-default-rtdb.europe-west1.firebasedatabase.app/"
         };
-        private static IFirebaseClient client;
+        private static IFirebaseClient? client;
         private static readonly string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
         private static readonly string Bucket = "aspdata-8d746.appspot.com";
 
@@ -39,7 +33,7 @@ namespace WebApplication1.Controllers
             ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
             string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
             string[] roleList = { "Marketing Coordinator" };
-            List<SignUpModel> list = new List<SignUpModel>();
+            List<SignUpModel> list = new();
             foreach (string role in roleList)
             {
                 FirebaseResponse response = client.Get("Account/" + role);
@@ -53,7 +47,7 @@ namespace WebApplication1.Controllers
                 }
             }
 
-            List<Course> courses = new List<Course>();
+            List<Course> courses = new();
             foreach (SignUpModel id in list)
             {
 
@@ -76,7 +70,7 @@ namespace WebApplication1.Controllers
             }
 
 
-            Dictionary<string, List<string>> mk = new Dictionary<string, List<string>>();
+            Dictionary<string, List<string>> mk = new();
             foreach (Course item in courses)
             {
                 FirebaseResponse response = client.Get("Mark/" + item.Coordinator + "/" + sid);
@@ -87,7 +81,7 @@ namespace WebApplication1.Controllers
 
 
 
-                List<string> ma = new List<string>
+                List<string> ma = new()
                 {
                     JsonConvert.DeserializeObject<string>(client.Get("Account/Marketing Coordinator/" + item.Coordinator + "/Email").Body),
                     mark,
@@ -112,8 +106,8 @@ namespace WebApplication1.Controllers
             string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
             string token = prinicpal.Claims.Where(c => c.Type == "Token").Select(c => c.Value).SingleOrDefault();
             FirebaseResponse response = client.Get("Link/" + coordinator + "/" + sid + "/");
-            List<string> nameFile = new List<string>();
-            List<string> link = new List<string>();
+            List<string> nameFile = new();
+            List<string> link = new();
             if (response.Body != "null")
             {
 
@@ -166,23 +160,21 @@ namespace WebApplication1.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<ActionResult> Submit(Submissions document, HttpPostedFileBase file, string coordinator)
+        public async Task<ActionResult> Submit(Submissions document, IFormFile file, string coordinator)
         {
             try
             {
-                FileStream stream;
-                if (file.ContentLength > 0)
+                client = new FireSharp.FirebaseClient(config);
+                ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+                string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+                string path = Path.Combine(Path.GetFullPath("~/Content/images/"), file.FileName);
+                FileStream stream = new(Path.Combine(path), FileMode.Open);
+                if (file.Length > 0)
                 {
-                    client = new FireSharp.FirebaseClient(config);
-                    ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-                    string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
-                    string path = Path.Combine(Server.MapPath("~/Content/images/"), file.FileName);
-                    file.SaveAs(path);
-                    stream = new FileStream(Path.Combine(path), FileMode.Open);
-
+                    file.CopyTo(stream);
 
                     //await Task.Run(() => up(stream, file.FileName, document.Token, coordinator));
-                    List<string> names = new List<string>();
+                    List<string> names = new();
 
 
                     FirebaseResponse response = client.Get("Link/" + coordinator + "/" + sid);
@@ -219,7 +211,7 @@ namespace WebApplication1.Controllers
 
 
 
-                    List<string> student = new List<string>();
+                    List<string> student = new();
 
                     FirebaseResponse response1 = client.Get("Link/" + coordinator + "/" + "/student");
 
@@ -241,26 +233,24 @@ namespace WebApplication1.Controllers
                     _ = await client.SetAsync("Link/" + coordinator + "/" + "/student", student);
 
                     string body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
-                    MailMessage message = new MailMessage();
+                    MailMessage message = new();
                     message.To.Add(new MailAddress(JsonConvert.DeserializeObject<string>(client.Get("Account/Marketing Coordinator/" + coordinator + "/Email/").Body)));
                     message.From = new MailAddress("thuyenprovjp@outlook.com.vn");  // replace with valid value
                     message.Subject = JsonConvert.DeserializeObject<string>(client.Get("Account/Marketing Coordinator/" + coordinator + "/Email/").Body) + "has given submitions to get feedback";
                     message.Body = string.Format(body, "Donotreply", "thuyenprovjp@outlook.com.vn", "Student " + sid + " submited");
                     message.IsBodyHtml = true;
 
-                    using (SmtpClient smtp = new SmtpClient())
+                    using SmtpClient smtp = new();
+                    NetworkCredential credential = new()
                     {
-                        NetworkCredential credential = new NetworkCredential
-                        {
-                            UserName = "thuyenprovjp@outlook.com.vn",
-                            Password = "provjp112233"
-                        };
-                        smtp.Credentials = credential;
-                        smtp.Host = "smtp-mail.outlook.com";
-                        smtp.Port = 587;
-                        smtp.EnableSsl = true;
-                        await smtp.SendMailAsync(message);
-                    }
+                        UserName = "thuyenprovjp@outlook.com.vn",
+                        Password = "provjp112233"
+                    };
+                    smtp.Credentials = credential;
+                    smtp.Host = "smtp-mail.outlook.com";
+                    smtp.Port = 587;
+                    smtp.EnableSsl = true;
+                    await smtp.SendMailAsync(message);
 
                     //SmtpClient client1 = new SmtpClient();
 
@@ -406,7 +396,7 @@ namespace WebApplication1.Controllers
 
 
 
-            List<string> names = new List<string>();
+            List<string> names = new();
 
 
             FirebaseResponse response = client.Get("Link/" + coordinator + "/" + sid);
@@ -450,9 +440,9 @@ namespace WebApplication1.Controllers
 
             byte[] keyArray;
             byte[] toEncryptArray = Convert.FromBase64String(toDecrypt);
-            MD5CryptoServiceProvider hashmd5 = new MD5CryptoServiceProvider();
+            MD5CryptoServiceProvider hashmd5 = new();
             keyArray = hashmd5.ComputeHash(UTF8Encoding.UTF8.GetBytes(key));
-            TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider
+            TripleDESCryptoServiceProvider tdes = new()
             {
                 Key = keyArray,
                 Mode = CipherMode.ECB,

@@ -9,15 +9,15 @@ namespace WebApplication1.Models
 
 
         [DataType(DataType.Text)]
-        public string role { get; set; }
+        public string? role { get; set; }
         [Required]
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Email")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
-        public string Password { get; set; }
+        public string? Password { get; set; }
     }
 }

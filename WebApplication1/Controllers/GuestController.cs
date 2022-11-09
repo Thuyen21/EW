@@ -1,13 +1,10 @@
 ﻿using Firebase.Storage;
 using FireSharp.Interfaces;
 using FireSharp.Response;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Web.Mvc;
 
 namespace WebApplication1.Controllers
 {
@@ -19,7 +16,7 @@ namespace WebApplication1.Controllers
             AuthSecret = "8Qcxfs4Nx3SwBX9iLWXKtDRyQ2DHZCBATJD075aF",
             BasePath = "https://aspdata-8d746-default-rtdb.europe-west1.firebasedatabase.app/"
         };
-        private static IFirebaseClient client;
+        private static IFirebaseClient? client;
         private static readonly string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
         private static readonly string Bucket = "aspdata-8d746.appspot.com";
         // GET: Guest
@@ -42,14 +39,14 @@ namespace WebApplication1.Controllers
             FirebaseResponse responseComment = client.Get("Comment/" + item.Key);
             Dictionary<string, string> Comment = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseComment.Body);
 
-            Dictionary<string, List<string>> d = new Dictionary<string, List<string>>();
+            Dictionary<string, List<string>> d = new();
             if (mark != null)
             {
                 foreach (KeyValuePair<string, string> a in mark)
                 {
                     if (a.Value == "Accept")
                     {
-                        List<string> c = new List<string>
+                        List<string> c = new()
                         {
                             JsonConvert.DeserializeObject<string>(client.Get("Account/Student/" + a.Key + "/Email").Body),
                             a.Value
@@ -220,8 +217,8 @@ namespace WebApplication1.Controllers
             ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
             string token = prinicpal.Claims.Where(c => c.Type == "Token").Select(c => c.Value).SingleOrDefault();
 
-            List<string> nameFile = new List<string>();
-            List<string> link = new List<string>();
+            List<string> nameFile = new();
+            List<string> link = new();
             if (response.Body != "null")
             {
 

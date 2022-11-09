@@ -7,8 +7,8 @@ namespace WebApplication1.Models
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
 
-        public string DesignationName { get; set; }
+        public string? DesignationName { get; set; }
 
-        public string Token { get; set; }
+        public string? Token { get; set; }
     }
 }

@@ -1,18 +1,11 @@
 ﻿using Firebase.Storage;
 using FireSharp.Interfaces;
 using FireSharp.Response;
-using Ionic.Zip;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
 using System.Security.Claims;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Web.Mvc;
 using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
@@ -25,7 +18,7 @@ namespace WebApplication1.Controllers
             AuthSecret = "8Qcxfs4Nx3SwBX9iLWXKtDRyQ2DHZCBATJD075aF",
             BasePath = "https://aspdata-8d746-default-rtdb.europe-west1.firebasedatabase.app/"
         };
-        private static IFirebaseClient client;
+        private static IFirebaseClient? client;
         private static readonly string ApiKey = "AIzaSyCxf2rABg_dosQjVmNMh5-XJodMOU0_G04";
         private static readonly string Bucket = "aspdata-8d746.appspot.com";
 
@@ -35,7 +28,7 @@ namespace WebApplication1.Controllers
         {
             client = new FireSharp.FirebaseClient(config);
             string[] roleList = { "Marketing Coordinator" };
-            List<SignUpModel> list = new List<SignUpModel>();
+            List<SignUpModel> list = new();
             foreach (string role in roleList)
             {
                 FirebaseResponse response = client.Get("Account/" + role);
@@ -48,13 +41,13 @@ namespace WebApplication1.Controllers
                     }
                 }
             }
-            List<Course> Courses = new List<Course>();
-            Dictionary<string, string> mail = new Dictionary<string, string>();
+            List<Course> Courses = new();
+            Dictionary<string, string> mail = new();
             foreach (SignUpModel id in list)
             {
 
                 FirebaseResponse response = client.Get("Course/" + id.id);
-                if (response.Body != null && response.Body != "null")
+                if (response.Body is not null and not "null")
                 {
                     dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
                     dynamic json = string.Format("[{0}]", data);
@@ -84,7 +77,7 @@ namespace WebApplication1.Controllers
 
             FirebaseResponse response = client.Get("Mark/" + coordinator);
             Dictionary<string, string> mark = JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Body);
-            Dictionary<string, string> markSort = new Dictionary<string, string>();
+            Dictionary<string, string> markSort = new();
             if (mark != null)
             {
                 foreach (KeyValuePair<string, string> item in mark)
@@ -100,12 +93,12 @@ namespace WebApplication1.Controllers
             FirebaseResponse responseComment = client.Get("Comment/" + coordinator);
             Dictionary<string, string> Comment = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseComment.Body);
 
-            Dictionary<string, List<string>> b = new Dictionary<string, List<string>>();
+            Dictionary<string, List<string>> b = new();
             if (markSort != null)
             {
                 foreach (KeyValuePair<string, string> a in markSort)
                 {
-                    List<string> c = new List<string>
+                    List<string> c = new()
                     {
                         JsonConvert.DeserializeObject<string>(client.Get("Account/Student/" + a.Key + "/Email").Body),
                         a.Value
@@ -135,8 +128,8 @@ namespace WebApplication1.Controllers
             FirebaseResponse response = client.Get("Link/" + coordinator + "/" + Student);
             ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
             string token = prinicpal.Claims.Where(c => c.Type == "Token").Select(c => c.Value).SingleOrDefault();
-            List<string> nameFile = new List<string>();
-            List<string> link = new List<string>();
+            List<string> nameFile = new();
+            List<string> link = new();
             if (response.Body != "null")
             {
                 List<string> a = JsonConvert.DeserializeObject<List<string>>(response.Body);
@@ -232,94 +225,94 @@ namespace WebApplication1.Controllers
                 return View();
             }
         }
-        public async Task<ActionResult> DownloadZip(string coordinator, string student)
-        {
-            ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
-            if (coordinator == null || student == null)
-            {
-                return RedirectToAction("index");
-            }
-            client = new FireSharp.FirebaseClient(config);
+        //public async Task<ActionResult> DownloadZip(string coordinator, string student)
+        //{
+        //    ClaimsPrincipal prinicpal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+        //    string sid = prinicpal.Claims.Where(c => c.Type == ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+        //    if (coordinator == null || student == null)
+        //    {
+        //        return RedirectToAction("index");
+        //    }
+        //    client = new FireSharp.FirebaseClient(config);
 
-            FirebaseResponse response = client.Get("Link/" + coordinator + "/" + student);
+        //    FirebaseResponse response = client.Get("Link/" + coordinator + "/" + student);
 
-            string token = prinicpal.Claims.Where(c => c.Type == "Token").Select(c => c.Value).SingleOrDefault();
+        //    string token = prinicpal.Claims.Where(c => c.Type == "Token").Select(c => c.Value).SingleOrDefault();
 
-            List<string> nameFile = new List<string>();
-            List<string> link = new List<string>();
-            if (response.Body != "null")
-            {
+        //    List<string> nameFile = new List<string>();
+        //    List<string> link = new List<string>();
+        //    if (response.Body != "null")
+        //    {
 
-                List<string> a = JsonConvert.DeserializeObject<List<string>>(response.Body);
+        //        List<string> a = JsonConvert.DeserializeObject<List<string>>(response.Body);
 
-                foreach (string item in a)
-                {
+        //        foreach (string item in a)
+        //        {
 
-                    string task = await new FirebaseStorage(Bucket, new FirebaseStorageOptions
-                    {
-                        AuthTokenAsyncFactory = () => Task.FromResult(token),
-                        ThrowOnCancel = true
-                    }).Child("Student submit").Child(coordinator).Child(student).Child(item).GetDownloadUrlAsync();
-                    link.Add(task);
-                    nameFile.Add(item);
-
-
-
-                }
-
-            }
-
-            string fileName = Server.MapPath("~\\Content\\images\\" + sid);
-
-            WebClient myWebClient = new WebClient();
-
-            DirectoryInfo attachments_AR = new DirectoryInfo(fileName);
-            EmptyFolder(attachments_AR);
-
-            if (!Directory.Exists(fileName))
-            {
-                _ = Directory.CreateDirectory(fileName);
-            }
+        //            string task = await new FirebaseStorage(Bucket, new FirebaseStorageOptions
+        //            {
+        //                AuthTokenAsyncFactory = () => Task.FromResult(token),
+        //                ThrowOnCancel = true
+        //            }).Child("Student submit").Child(coordinator).Child(student).Child(item).GetDownloadUrlAsync();
+        //            link.Add(task);
+        //            nameFile.Add(item);
 
 
-            for (int i = 0; i < link.Count; i++)
-            {
 
-                myWebClient.DownloadFile(link[i], @"d:\DZHosts\LocalUser\crt112233\www.crt112233.somee.com\Content\images\" + sid + @"\" + nameFile[i]);
-            }
+        //        }
+
+        //    }
+
+        //    string fileName = Path.GetFullPath("~\\Content\\images\\" + sid);
+
+        //    WebClient myWebClient = new WebClient();
+
+        //    DirectoryInfo attachments_AR = new DirectoryInfo(fileName);
+        //    EmptyFolder(attachments_AR);
+
+        //    if (!Directory.Exists(fileName))
+        //    {
+        //        _ = Directory.CreateDirectory(fileName);
+        //    }
 
 
-            string[] filePaths = Directory.GetFiles(Server.MapPath("~\\Content\\images\\" + sid));
+        //    for (int i = 0; i < link.Count; i++)
+        //    {
+
+        //        myWebClient.DownloadFile(link[i], @"d:\DZHosts\LocalUser\crt112233\www.crt112233.somee.com\Content\images\" + sid + @"\" + nameFile[i]);
+        //    }
 
 
-            List<FileModel> files = new List<FileModel>();
-            foreach (string filePath in filePaths)
-            {
-                files.Add(new FileModel()
-                {
-                    FileName = Path.GetFileName(filePath),
-                    FilePath = filePath
-                });
-            }
-            using (ZipFile zip = new ZipFile())
-            {
-                zip.AlternateEncodingUsage = ZipOption.AsNecessary;
-                _ = zip.AddDirectoryByName("Files");
-                foreach (FileModel file in files)
-                {
+        //    string[] filePaths = Directory.GetFiles(Path.GetFullPath("~\\Content\\images\\" + sid));
 
-                    _ = zip.AddFile(file.FilePath, "Files");
 
-                }
-                string zipName = string.Format("Zip_{0}.zip", DateTime.Now.ToString("yyyy-MMM-dd-HHmmss"));
-                using (MemoryStream memoryStream = new MemoryStream())
-                {
-                    zip.Save(memoryStream);
-                    return File(memoryStream.ToArray(), "application/zip", zipName);
-                }
-            }
-        }
+        //    List<FileModel> files = new List<FileModel>();
+        //    foreach (string filePath in filePaths)
+        //    {
+        //        files.Add(new FileModel()
+        //        {
+        //            FileName = Path.GetFileName(filePath),
+        //            FilePath = filePath
+        //        });
+        //    }
+        //    //using (ZipFile zip = new ZipFile())
+        //    //{
+        //    //    zip.AlternateEncodingUsage = ZipOption.AsNecessary;
+        //    //    _ = zip.AddDirectoryByName("Files");
+        //    //    foreach (FileModel file in files)
+        //    //    {
+
+        //    //        _ = zip.AddFile(file.FilePath, "Files");
+
+        //    //    }
+        //    //    string zipName = string.Format("Zip_{0}.zip", DateTime.Now.ToString("yyyy-MMM-dd-HHmmss"));
+        //    //    using (MemoryStream memoryStream = new MemoryStream())
+        //    //    {
+        //    //        zip.Save(memoryStream);
+        //    //        return File(memoryStream.ToArray(), "application/zip", zipName);
+        //    //    }
+        //    //}
+        //}
         private void EmptyFolder(DirectoryInfo directory)
         {
 
@@ -343,7 +336,7 @@ namespace WebApplication1.Controllers
 
 
         }
-        public async Task<ActionResult> Exceptional(string coordinator)
+        public ActionResult Exceptional(string coordinator)
         {
             if (coordinator == null)
             {
@@ -353,8 +346,8 @@ namespace WebApplication1.Controllers
 
 
             Dictionary<string, string> exceptional = JsonConvert.DeserializeObject<Dictionary<string, string>>(client.Get("Exceptional/" + coordinator).Body);
-            Dictionary<string, List<string>> b = new Dictionary<string, List<string>>();
-            Dictionary<string, string> matches = new Dictionary<string, string>();
+            Dictionary<string, List<string>> b = new();
+            Dictionary<string, string> matches = new();
             if (exceptional != null)
             {
                 List<string> matche = exceptional.Where(pair => pair.Value == "0").Select(pair => pair.Key).ToList();
@@ -363,7 +356,7 @@ namespace WebApplication1.Controllers
                     foreach (string item in matche)
                     {
                         string test = JsonConvert.DeserializeObject<string>(client.Get("Comment/" + coordinator + "/" + item).Body);
-                        if (test == " " || test == "")
+                        if (test is " " or "")
                         {
 
                             matches.Add(item, JsonConvert.DeserializeObject<string>(client.Get("Account/Student/" + item + "/Email").Body));
@@ -407,7 +400,7 @@ namespace WebApplication1.Controllers
 
             return View(matches);
         }
-        public async Task<ActionResult> Contributions(string coordinator)
+        public ActionResult Contributions(string coordinator)
         {
             if (coordinator == null)
             {
@@ -420,7 +413,7 @@ namespace WebApplication1.Controllers
             FirebaseResponse student = client.Get("Link/" + coordinator + "/student");
             List<string> students = JsonConvert.DeserializeObject<List<string>>(student.Body);
 
-            Dictionary<string, int> b = new Dictionary<string, int>();
+            Dictionary<string, int> b = new();
             if (students != null)
             {
                 foreach (string item in students)
@@ -443,10 +436,10 @@ namespace WebApplication1.Controllers
 
 
 
-            List<SignUpModel> list = new List<SignUpModel>();
-            Dictionary<string, int> c = new Dictionary<string, int>();
+            List<SignUpModel> list = new();
+            Dictionary<string, int> c = new();
 
-            Dictionary<string, int> d = new Dictionary<string, int>();
+            Dictionary<string, int> d = new();
             FirebaseResponse response = client.Get("Account/Marketing Coordinator");
             dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
             if (data != null)
